@@ -1,8 +1,7 @@
 import "LoginRegister.scss"
 
-function LoginRegister() {
-
-} return (
+const LoginRegister = () => {
+return (
 <div className="loginPage">
 
 <h1 className="loginTitle">Login</h1>
@@ -20,6 +19,6 @@ function LoginRegister() {
 </form>
 
 </div>
-)
+)}
 
-export default LoginRegister
+export default LoginRegister;

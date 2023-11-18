@@ -1,0 +1,44 @@
+body {
+    background-image: url(../../assets/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.loginCoverContainer {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30pt;
+}
+
+.loginCoverButtonContainer {
+    display: block;
+    justify-content: center;
+}
+
+button.loginCoverButton {
+    background-color: rgb(1 116 142);
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    margin-bottom: 16pt;
+    border: 0;
+    color: white;
+    font-size: 12pt;
+}
+
+.loginCoverQuestion {
+    font-size: 20pt;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgb(14, 54, 61);
+}
+
+.loginCoverSkip {
+    font-size: 12pt;
+    text-decoration: none;
+    color: rgb(14, 54, 61);
+}

@@ -1,0 +1,87 @@
+.loginPage{
+    max-width: 100vh;
+    max-height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.loginForm{
+        background-color: white;
+        width: 80vw;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logoLogin{
+            max-width: 350px;
+            margin-bottom: 100px;
+        }
+
+        .loginTitle{
+            color: rgb(1, 116, 142);
+            text-align: center;
+            font-weight: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;    
+        }
+
+        input{ 
+            width: 350px;
+            display: flex;
+            margin-bottom: 10px;
+            border: 3px solid white;
+            border-bottom: 1px solid #afafaf ;
+            width: 400px;
+            height: 30px;
+            margin-top: 20px;
+            padding-left: 10px;
+        }
+
+        .missedPass {
+            margin-bottom: 10px;
+            text-align: right;
+            width: 350px;
+            color: grey;
+        }
+
+        .buttonLogin{
+            cursor: pointer;
+            margin-top: 50px;
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: rgb(1, 116, 142);
+            border: 3px solid white;
+            color: white;
+            margin-bottom: 10px;
+            &:hover{
+                background-color: rgb(0, 76, 93);
+                transition: 0.5s;
+            }
+        }
+
+        .buttonSignIn {
+            cursor: pointer;
+            margin-top: 5px;
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid rgb(1, 116, 142);
+            color: rgb(1, 116, 142);
+            margin-bottom: 10px;
+            &:hover{
+                background-color: rgb(0, 76, 93);
+                transition: 0.5s;
+            }
+        }
+    }
+
+
+

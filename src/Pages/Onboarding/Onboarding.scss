@@ -1,0 +1,51 @@
+.containerOnboarding {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 60px 40px 10px 40px;
+
+  .slider {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    .slider-img {
+      width: 100%;
+    }
+
+    .slider-title {
+      margin-top: 1em;
+      color: #01748e;
+    }
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;    }
+    .dot.active {
+      background-color: rgb(250, 156, 147);
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+  }
+}

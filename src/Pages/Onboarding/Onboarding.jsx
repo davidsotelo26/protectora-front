@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../Onboarding/Onboarding.scss";
-import image1 from "../../Assets/undrawGoodDoggy4Wfq.png";
-import image2 from "../../Assets/imagen2.png";
-import image3 from "../../Assets/undrawPetAdoption2Qkw.png";
-import cerrarOnboarding from "../../Assets/cerrar.png";
+import image1 from "../../assets/undrawGoodDoggy4Wfq.png";
+import image2 from "../../assets/imagen2.png";
+import image3 from "../../assets/undrawPetAdoption2Qkw.png";
+import cerrarOnboarding from "../../assets/cerrar.png";
 
 function App() {
   const [activeDot, setActiveDot] = useState(0);

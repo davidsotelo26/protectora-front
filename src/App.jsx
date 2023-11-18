@@ -4,6 +4,7 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 
 import Onboarding from './Pages/Onboarding/Onboarding';
 import LoginCover from './Pages/Login/LoginCover';
+import LoginRegister from './Pages/Login/LoginRegister';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Onboarding />} />
-            <Route path="/Login" element={<LoginCover />} />
+            <Route path="/LoginCover" element={<LoginCover />} />
+            <Route path="/LoginRegister" element={<LoginRegister />} />
           </Routes>
         </Router>
       </body>

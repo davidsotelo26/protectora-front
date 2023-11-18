@@ -1,6 +1,6 @@
 import "LoginRegister.scss"
 
-const LoginRegister = () => {
+const LoginRegister = () => {}
 return (
 <div className="loginPage">
 

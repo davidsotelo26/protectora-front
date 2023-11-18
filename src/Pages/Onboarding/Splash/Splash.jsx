@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from "../../../Assets/LuckyCompletoSinFondo.png";
+import logo from "../../../assets/LuckyCompletoSinFondo.png";
 import './Splash.scss';
 
 function Splash() {

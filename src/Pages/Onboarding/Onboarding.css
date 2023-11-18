@@ -1,0 +1,64 @@
+.containerOnboarding {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.containerOnboarding .slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+}
+.containerOnboarding .slider .slider-img {
+  margin-top: 175px;
+  width: 238px;
+  height: 156px;
+}
+.containerOnboarding .slider .slider-title {
+  width: 256px;
+  height: 50px;
+  margin-top: 55px;
+  color: #01748e;
+  font-size: 25px;
+}
+.containerOnboarding .slider .slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.containerOnboarding .slider .dot {
+  height: 17px;
+  width: 17px;
+  margin: 0 5px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(250, 156, 147);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.containerOnboarding .slider .dot.active {
+  background-color: rgb(250, 156, 147);
+}
+.containerOnboarding p {
+  width: 320px;
+  height: 57px;
+  font-size: Barlow;
+  font-weight: 400;
+}
+.containerOnboarding .close-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  margin: 5px;
+}/*# sourceMappingURL=Onboarding.css.map */

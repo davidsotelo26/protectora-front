@@ -1,44 +1,49 @@
-body {
-    background-image: url(../../assets/fondo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
 .loginCoverContainer {
-    text-align: center;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 30pt;
-}
+  width: 375px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background-image: url(../../assets/fondo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 36px;
 
-.loginCoverButtonContainer {
+  .loginCoverQuestion {
+    width: 198px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: rgb(14, 54, 61);
+  }
+
+  .loginCoverButtonContainer {
     display: block;
     justify-content: center;
-}
+    align-items: center;
+  }
 
-button.loginCoverButton {
+  button.loginCoverButton {
     background-color: rgb(1 116 142);
     border-radius: 5px;
-    width: 100%;
-    padding-top: 10pt;
-    padding-bottom: 10pt;
-    margin-bottom: 16pt;
+    width: 196px;
+    height: 40px;
+    margin-bottom: 10pt;
     border: 0;
-    color: white;
-    font-size: 12pt;
-}
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+  }
 
-.loginCoverQuestion {
-    font-size: 20pt;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: rgb(14, 54, 61);
-}
-
-.loginCoverSkip {
-    font-size: 12pt;
+  .loginCoverSkip {
+    width: 153pt;
+    height: 14pt;
+    font-size: 12px;
     text-decoration: none;
     color: rgb(14, 54, 61);
+    text-align: center;
+  }
 }

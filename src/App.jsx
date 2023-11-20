@@ -6,6 +6,7 @@ import Onboarding from "./Pages/Onboarding/Onboarding";
 import LoginCover from "./Pages/Login/LoginCover";
 import LoginRegister from "./Pages/Login/LoginRegister";
 import Navbar from "./Components/navbar/navbar";
+import MapPage from "./Pages/Map/MapPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/logincover" element={<LoginCover />} />
           <Route path="/loginregister" element={<LoginRegister />} />
           <Route path="/navbar" element={<Navbar />} />
+          <Route path="Map" element={<MapPage />} />
         </Routes>
       </Router>
     </div>

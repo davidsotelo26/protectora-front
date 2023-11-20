@@ -15,7 +15,7 @@
         margin-bottom: 64px;
         border-radius: 100%;
         object-fit: cover;    
-        border: 10px solid #01748E;
+        border: 5px solid #01748E;
     }
 
     a{
@@ -32,6 +32,7 @@
             justify-content: flex-start;
             width: 80vw;
         
+            border-radius: 4px;
             background-color: white;
             border: 1px solid #01748E;
             color: #01748E;

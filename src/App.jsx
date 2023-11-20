@@ -21,7 +21,7 @@ function App() {
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/logincover" element={<LoginCover />} />
           <Route path="/loginregister" element={<LoginRegister />} />
-          <Route path="/Map" element={<MapPage />} />
+          <Route path="/map" element={<MapPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/mas" element={<MasPage />} />
           <Route path="/donaciones" element={<Donaciones />} />

@@ -68,7 +68,7 @@ onclick={() => cambioClaseHome} />
 <img className="botonmascotasblue" src={imageClassMascotas} alt="botonmascotasblue" onclick={() => cambioClaseMascotas}/>
 </Link>
 
-<Link to="/navbar">
+<Link to="/profile">
 <img className="botonperfilblue" src={imageClassPerfil} alt="botonperfilblue" onclick={() => cambioClasePerfil}/>
 </Link>
 

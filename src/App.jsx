@@ -7,6 +7,7 @@ import LoginCover from "./Pages/Login/LoginCover";
 import LoginRegister from "./Pages/Login/LoginRegister";
 import Home from "./Pages/Home/Home";
 import MasPage from "./Pages/Mas/mas";
+import Donaciones from "./Pages/donaciones/donaciones";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/loginregister" element={<LoginRegister />} />
           <Route path="/home" element={<Home />} />
           <Route path="/mas" element={<MasPage />} />
+          <Route path="/donaciones" element={<Donaciones />} />
 
         </Routes>
       </Router>

@@ -1,23 +1,22 @@
-// PENDIENTE CAMBIAR LA PROFILE IMAGE Y REESTABLECER LAS RUTAS
+import "./profilepage.scss"
 
 import Navbar from "../../Components/navbar/navbar";
 import botonperfil from "../../../src/assets/Primarios/chico.png";
 import botonMapa from "../../../src/assets/Primarios/localization.png";
 import botonFavs from "../../../src/assets/perfil/favoritosCopy.png";
 import botonNotificaciones from "../../../src/assets/perfil/notificaciones.png";
+import botonAdopciones from "../../../src/assets/perfil/mascota.png";
+import botonApadrinar from "../../../src/assets/perfil/apadrina.png";
+import botonDonar from "../../../src/assets/perfil/donar.png";
+import fotoPerro from "../../../src/assets/dentro/Rocky.png";
 import flecha from "../../../src/assets/perfil/arrow.png";
-import botonConfig from "../../../src/assets/perfil/salir.png";
-import logout from "../../../src/assets/perfil/salir.png"
-import "./mas.scss"
 import { Link } from "react-router-dom";
 
-const MasPage = () => {
+const ProfilePage = () => {
 
-    return(
-    
-    <div className="MasContainer">
+    return(<div className="ProfileContainer">
 
-<div className="buttons">
+<img className="profilePhoto" src={fotoPerro} alt="profilephoto" />
 
 <Link to="/profile">
 <button className="botonPerfil">
@@ -51,31 +50,34 @@ const MasPage = () => {
 </button>
 </Link>
 
-<Link to="/config">
+<Link to="/adopciones">
 <button className="botonAdopciones">
-    <img src={botonConfig} alt="" />
-    <p className="pButton">Configuracion</p>
+    <img src={botonAdopciones} alt="" />
+    <p className="pButton">Estado de adopcion</p>
     <img src={flecha} alt="" />
 </button>
 </Link>
 
-</div>
-<div className="logout">
-
-<Link to="/onboargind">
-<button className="botonAdopciones">
-    <img src={logout} alt="" />
-    <p className="pButton">Log Out</p>
+<Link to="/apadrinar">
+<button className="botonApadrinar">
+    <img src={botonApadrinar} alt="" />
+    <p className="pButton">Apadrinar</p>
     <img src={flecha} alt="" />
 </button>
 </Link>
 
-</div>
+ <Link to="/donaciones">
+<button className="botonDonar">
+    <img src={botonDonar} alt="" />
+    <p className="pButton">Donar</p>
+    <img src={flecha} alt="" />
+</button>
+</Link>
+
 <Navbar />
+
 </div>
+)
+}
 
-
-    )
-};
-
-export default MasPage; 
+export default ProfilePage;

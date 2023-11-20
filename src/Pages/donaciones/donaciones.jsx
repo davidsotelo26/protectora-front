@@ -4,7 +4,6 @@ import Navbar from "../../Components/navbar/navbar";
 
 const Donaciones = () => {
     
-    
     return (<div className="containerDonaciones">
 
         <img src={logotipo} alt="" />

@@ -8,6 +8,7 @@ import LoginRegister from "./Pages/Login/LoginRegister";
 import Home from "./Pages/Home/Home";
 import MasPage from "./Pages/Mas/mas";
 import Donaciones from "./Pages/donaciones/donaciones";
+import ProfilePage from "./Pages/profilepage/profilepage";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/mas" element={<MasPage />} />
           <Route path="/donaciones" element={<Donaciones />} />
-
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </Router>
     </div>

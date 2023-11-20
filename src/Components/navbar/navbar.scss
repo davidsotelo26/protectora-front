@@ -1,0 +1,20 @@
+
+
+.navbar{
+    width: 100vw;
+    height: 7vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border-top: 2px solid rgb(231, 231, 231);
+background-color: #ffffff;
+
+    position: fixed;
+    bottom: 0;
+
+    img {
+        max-width: 32px;
+    }
+}

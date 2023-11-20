@@ -40,3 +40,9 @@ html, body, #root, .App {
     width: 100%;
   }
 }
+
+.desktop {
+  @media (min-width: 992px) {
+    width: 100%;
+  }
+}

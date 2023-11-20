@@ -16,7 +16,7 @@ const ProfilePage = () => {
 
     return(<div className="ProfileContainer">
 
-<img className="profilePhoto" src={fotoPerro} alt="profilephoto" />
+<img className="profilePhoto" src="https://valenciaplaza.com/public/Image/2017/5/549d760748b5f_NoticiaAmpliada.jpg" alt="profilephoto" />
 
 <Link to="/profile">
 <button className="botonPerfil">

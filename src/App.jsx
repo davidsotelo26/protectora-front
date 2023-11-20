@@ -6,7 +6,7 @@ import Onboarding from "./Pages/Onboarding/Onboarding";
 import LoginCover from "./Pages/Login/LoginCover";
 import LoginRegister from "./Pages/Login/LoginRegister";
 import Home from "./Pages/Home/Home";
-import Navbar from "./Components/navbar/navbar";
+import MasPage from "./Pages/Mas/mas";
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
           <Route path="/logincover" element={<LoginCover />} />
           <Route path="/loginregister" element={<LoginRegister />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/navbar" element={<Navbar />} />
+          <Route path="/mas" element={<MasPage />} />
+
         </Routes>
       </Router>
     </div>

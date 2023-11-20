@@ -1,24 +1,53 @@
-import "LoginRegister.scss"
+import "./LoginRegister.scss";
+import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import  passwordIcon from "../../assets/ojo.png";
+
 
 const LoginRegister = () => {
-return (
-<div className="loginPage">
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
-<h1 className="loginTitle">Login</h1>
+  const handlePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
 
-<form className="loginForm" action="">
-    <div className="inputEmail">
-            <label id='emailLabel'>Email:</label>
-            <input id='emailInput' type='email' />
+  return (
+    <div className="loginPage">
+      <form className="loginForm" action="">
+        <Link to="/">
+          <img
+            src="https://cdn.zeplin.io/5e2888579d7785572934fb93/assets/23B58F07-E761-4764-A5DD-0D73C60228FB.png"
+            className="logoLogin"
+            alt="logotipo"
+          />
+        </Link>
+
+        <h1 className="loginTitle">
+          ¡Hola! para continuar, inicia sesión o crea una cuenta.
+        </h1>
+
+        <div className="inputEmail">
+          <input id="emailInput" type="email" placeholder="Email" />
+        </div>
+        <div className="inputPassword">
+          <input id="passwordInput" type={isPasswordVisible ? "text" : "password"} placeholder="Contraseña" />
+          <img src={passwordIcon} alt="Icono visualizar contraseña" className="passwordIcon" onClick={handlePasswordVisibility}/>
+        </div>
+
+        <a href="/loginregister" className="missedPass">
+          ¿Has olvidado tu contraseña?
+        </a>
+
+        <button className="buttonLogin" type="submit">
+          Iniciar sesión
+        </button>
+
+        <button className="buttonSignIn" type="submit">
+          Crear cuenta
+        </button>
+      </form>
     </div>
-    <div className="inputPassword">
-            <label id='passwordLabel'>Contraseña:</label>
-            <input id='passwordInput' type='password'/>
-    </div>
-    <button type='submit'>Login</button>   
-</form>
-
-</div>
-)}
+  );
+};
 
 export default LoginRegister;

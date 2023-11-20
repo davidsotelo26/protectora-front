@@ -1,0 +1,49 @@
+.loginCoverContainer {
+  width: 375px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background-image: url(../../assets/fondo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 36px;
+
+  .loginCoverQuestion {
+    width: 198px;
+    height: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: rgb(14, 54, 61);
+  }
+
+  .loginCoverButtonContainer {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button.loginCoverButton {
+    background-color: rgb(1 116 142);
+    border-radius: 5px;
+    width: 196px;
+    height: 40px;
+    margin-bottom: 10pt;
+    border: 0;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+  }
+
+  .loginCoverSkip {
+    width: 153pt;
+    height: 14pt;
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(14, 54, 61);
+    text-align: center;
+  }
+}

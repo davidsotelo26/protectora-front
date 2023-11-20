@@ -1,0 +1,14 @@
+.navbar{
+    width: 100vw;
+    height: 5vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border-top: 1px solid rgb(231, 231, 231);
+
+    img {
+        max-width: 32px;
+    }
+}

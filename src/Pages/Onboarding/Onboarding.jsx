@@ -1,12 +1,18 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "../Onboarding/Onboarding.scss";
-import image1 from "../../Assets/undrawGoodDoggy4Wfq.png";
-import image2 from "../../Assets/imagen2.png";
-import image3 from "../../Assets/undrawPetAdoption2Qkw.png";
-import cerrarOnboarding from "../../Assets/cerrar.png";
+import image1 from "../../assets/undrawGoodDoggy4Wfq.png";
+import image2 from "../../assets/imagen2.png";
+import image3 from "../../assets/undrawPetAdoption2Qkw.png";
+import closeOnboarding from "../../assets/cerrar.png";
 
-function App() {
+function Onboarding() {
   const [activeDot, setActiveDot] = useState(0);
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/logincover');
+  }
 
   const slides = [
     {
@@ -31,8 +37,8 @@ function App() {
 
   return (
     <div className="containerOnboarding">
-      <button className="close-btn">
-        <img src={cerrarOnboarding} alt="Cerrar" />
+      <button className="close-btn" onClick={handleButtonClick}>
+        <img src={closeOnboarding} alt="Cerrar" />
       </button>
       <div className="slider">
         <img
@@ -61,4 +67,4 @@ function App() {
   );
 }
 
-export default App;
+export default Onboarding;

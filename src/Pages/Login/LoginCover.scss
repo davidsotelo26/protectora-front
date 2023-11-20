@@ -1,6 +1,6 @@
 .loginCoverContainer {
-  width: 375px;
-  height: 100%;
+  width: 390px;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-bottom: 36px;
+  margin-bottom: 36px;
 
   .loginCoverQuestion {
     width: 198px;

@@ -1,6 +1,6 @@
 .loginPage {
-  width: 375px;
-  height: 100%;
+  width: 390px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +10,6 @@
     background-color: white;
     width: 375px;
     height: auto;
-    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;

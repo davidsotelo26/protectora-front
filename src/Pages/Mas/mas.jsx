@@ -45,8 +45,8 @@ const MasPage = () => {
 </button>
 </Link>
 
- <Link to="/notificaciones">
-<button className="botonNotificaciones">
+ <Link to="/help">
+<button className="botonAyuda">
     <img src="https://cdn.zeplin.io/5e2888579d7785572934fb93/assets/4A859EE1-80DA-4AC9-B92B-C94EA3BD171F.png" alt="" />
     <p className="pButton">Ayuda</p>
     <img src={flecha} alt="" />

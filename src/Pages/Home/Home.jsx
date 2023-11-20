@@ -6,11 +6,11 @@ import Chinchillas from "../../assets/dentro/hamster.png";
 import Iguanas from "../../assets/dentro/iguana.png";
 import Boxer from "../../assets/dentro/boxer.png";
 
-import HomeIcon from "../../assets/menu pie/homered.png";
-import MapaIcon from "../../assets/menu pie/mapa.png";
-import MascotaIcon from "../../assets/menu pie/mascota.png";
-import PerfilIcon from "../../assets/menu pie/perfil.png";
-import MasIcon from "../../assets/menu pie/mS.png";
+import HomeIcon from "../../assets/menupie/homered.png";
+import MapaIcon from "../../assets/menupie/mapa.png";
+import MascotaIcon from "../../assets/menupie/mascota.png";
+import PerfilIcon from "../../assets/menupie/perfil.png";
+import MasIcon from "../../assets/menupie/mS.png";
 
 const Home = ({ nombrelogin }) => {
   return (

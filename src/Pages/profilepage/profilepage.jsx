@@ -21,7 +21,7 @@ const ProfilePage = () => {
 <Link to="/profile">
 <button className="botonPerfil">
     <img src={botonperfil} alt="" />
-    <p className="pButton">Mi perfil</p>
+    <p className="pButton">Asociaciones protectoras</p>
     <img src={flecha} alt="" />
 </button>
 </Link>
@@ -29,7 +29,7 @@ const ProfilePage = () => {
 <Link to="/mapa">
 <button className="botonMapa">
     <img src={botonMapa} alt="" />
-    <p className="pButton">Direcciones</p>
+    <p className="pButton">Eventos</p>
     <img src={flecha} alt="" />
 </button>
 </Link>
@@ -37,7 +37,7 @@ const ProfilePage = () => {
 <Link to="/favoritos">
 <button className="botonFavoritos">
     <img src={botonFavs} alt="" />
-    <p className="pButton">Favoritos</p>
+    <p className="pButton">Curiosidades</p>
     <img src={flecha} alt="" />
 </button>
 </Link>
@@ -45,7 +45,7 @@ const ProfilePage = () => {
  <Link to="/notificaciones">
 <button className="botonNotificaciones">
     <img src={botonNotificaciones} alt="" />
-    <p className="pButton">Notificaciones</p>
+    <p className="pButton">Ayuda</p>
     <img src={flecha} alt="" />
 </button>
 </Link>
@@ -53,7 +53,7 @@ const ProfilePage = () => {
 <Link to="/adopciones">
 <button className="botonAdopciones">
     <img src={botonAdopciones} alt="" />
-    <p className="pButton">Estado de adopcion</p>
+    <p className="pButton">Configuracion</p>
     <img src={flecha} alt="" />
 </button>
 </Link>

@@ -14,7 +14,7 @@ import ProfilePage from "./Pages/profilepage/profilepage";
 
 function App() {
   return (
-    <div className="container">
+    <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Splash />} />
@@ -26,7 +26,6 @@ function App() {
           <Route path="/mas" element={<MasPage />} />
           <Route path="/donaciones" element={<Donaciones />} />
           <Route path="/profile" element={<ProfilePage />} />
-
         </Routes>
       </Router>
     </div>

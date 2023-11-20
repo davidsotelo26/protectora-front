@@ -5,8 +5,12 @@ import Splash from "./Pages/Onboarding/Splash/Splash";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import LoginCover from "./Pages/Login/LoginCover";
 import LoginRegister from "./Pages/Login/LoginRegister";
-import Navbar from "./Components/navbar/navbar";
+
 import MapPage from "./Pages/Map/MapPage";
+import Home from "./Pages/Home/Home";
+import MasPage from "./Pages/Mas/mas";
+import Donaciones from "./Pages/donaciones/donaciones";
+import ProfilePage from "./Pages/profilepage/profilepage";
 
 function App() {
   return (
@@ -17,8 +21,12 @@ function App() {
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/logincover" element={<LoginCover />} />
           <Route path="/loginregister" element={<LoginRegister />} />
-          <Route path="/navbar" element={<Navbar />} />
-          <Route path="Map" element={<MapPage />} />
+          <Route path="/Map" element={<MapPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/mas" element={<MasPage />} />
+          <Route path="/donaciones" element={<Donaciones />} />
+          <Route path="/profile" element={<ProfilePage />} />
+
         </Routes>
       </Router>
     </div>

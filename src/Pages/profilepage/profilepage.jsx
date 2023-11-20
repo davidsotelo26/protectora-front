@@ -8,7 +8,6 @@ import botonNotificaciones from "../../../src/assets/perfil/notificaciones.png";
 import botonAdopciones from "../../../src/assets/perfil/mascota.png";
 import botonApadrinar from "../../../src/assets/perfil/apadrina.png";
 import botonDonar from "../../../src/assets/perfil/donar.png";
-import fotoPerro from "../../../src/assets/dentro/Rocky.png";
 import flecha from "../../../src/assets/perfil/arrow.png";
 import { Link } from "react-router-dom";
 
@@ -16,7 +15,7 @@ const ProfilePage = () => {
 
     return(<div className="ProfileContainer">
 
-<img className="profilePhoto" src={fotoPerro} alt="profilephoto" />
+<img className="profilePhoto" src="https://valenciaplaza.com/public/Image/2017/5/549d760748b5f_NoticiaAmpliada.jpg" alt="profilephoto" />
 
 <Link to="/profile">
 <button className="botonPerfil">
@@ -29,7 +28,7 @@ const ProfilePage = () => {
 <Link to="/mapa">
 <button className="botonMapa">
     <img src={botonMapa} alt="" />
-    <p className="pButton">Direcciones</p>
+    <p className="pButton">Localizaciones</p>
     <img src={flecha} alt="" />
 </button>
 </Link>
@@ -53,7 +52,7 @@ const ProfilePage = () => {
 <Link to="/adopciones">
 <button className="botonAdopciones">
     <img src={botonAdopciones} alt="" />
-    <p className="pButton">Estado de adopcion</p>
+    <p className="pButton">Adopciones</p>
     <img src={flecha} alt="" />
 </button>
 </Link>

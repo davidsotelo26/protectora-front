@@ -10,6 +10,10 @@
     height: 100vh;
     justify-content: space-around;
 
+    a{
+        text-decoration:none;
+    }
+
 button {
 margin-top: 16px;
 margin-bottom: 0px;
@@ -25,6 +29,7 @@ margin-bottom: 0px;
     color: #01748E;
 
     img {
+        width: 24px;
         margin-left: 16px;
         margin-right: 16px;
     }

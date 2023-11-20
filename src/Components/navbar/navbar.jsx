@@ -55,24 +55,24 @@ const Navbar = () => {
     
     <div className="navbar">
 
-<Link to="/">
+<Link to="/navbar">
 <img className="botonhomeblue" src={imageClassHome} alt="botonhomeblue"
 onclick={() => cambioClaseHome} />
 </Link>
 
-<Link to="/">
+<Link to="/navbar">
 <img className="botonmapablue" src={imageClassMapa} alt="botonmapablue" onclick={() => cambioClaseMapa}/>
 </Link>
 
-<Link to="/">
+<Link to="/navbar">
 <img className="botonmascotasblue" src={imageClassMascotas} alt="botonmascotasblue" onclick={() => cambioClaseMascotas}/>
 </Link>
 
-<Link to="/">
+<Link to="/navbar">
 <img className="botonperfilblue" src={imageClassPerfil} alt="botonperfilblue" onclick={() => cambioClasePerfil}/>
 </Link>
 
-<Link to="/">
+<Link to="/navbar">
 <img className="botonmasblue" src={imageClassMas} alt="botonmasblue" onclick={() => cambioClaseMas}/>
 </Link>
 

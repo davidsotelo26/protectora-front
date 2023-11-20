@@ -55,7 +55,7 @@ const Navbar = () => {
     
     <div className="navbar">
 
-<Link to="/navbar">
+<Link to="/home">
 <img className="botonhomeblue" src={imageClassHome} alt="botonhomeblue"
 onclick={() => cambioClaseHome} />
 </Link>
@@ -72,7 +72,7 @@ onclick={() => cambioClaseHome} />
 <img className="botonperfilblue" src={imageClassPerfil} alt="botonperfilblue" onclick={() => cambioClasePerfil}/>
 </Link>
 
-<Link to="/navbar">
+<Link to="/mas">
 <img className="botonmasblue" src={imageClassMas} alt="botonmasblue" onclick={() => cambioClaseMas}/>
 </Link>
 

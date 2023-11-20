@@ -1,0 +1,1 @@
+import "./petProfile.scss"

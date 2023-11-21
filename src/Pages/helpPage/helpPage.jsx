@@ -1,12 +1,16 @@
 import "./helpPage.scss"
 import logotipo from "../../assets/logonombre.png"
 import Navbar from "../../Components/navbar/navbar";
+import { Link } from "react-router-dom";
 
 const HelpPage = () => {
-    return (
+    return (<>
 <div className="helpContainer">
 
+<Link to="/home">
 <img src={logotipo} alt="" />
+</Link>
+
 <h1 className="Titulo">· PREGUNTAS FRECUENTES ·</h1>
 
 <section className="preguntas">
@@ -51,12 +55,29 @@ const HelpPage = () => {
         <p>Si no puedes seguir cuidando a tu mascota, es importante contactar a una protectora de animales para buscar una solución adecuada. Ellos podrán ayudarte a encontrar un nuevo hogar para tu mascota o brindarte orientación sobre otras opciones disponibles.</p>
     </ul>
 
+    </section>
+    
+    <section className="contacto">
 
-</section>
+    <h1 className="Titulo">CONTACTANOS</h1>
+
+    <ul className="pregunta">
+        <h3 className="tipo"> CORREO ELECTRONICO </h3><br />
+        <p className="dato">lucky@pelopicopata.com</p>
+    </ul>
+
+    <ul className="pregunta">
+        <h3 className="tipo"> TELEFONO </h3><br />
+        <p className="dato">676 77 66 77</p>
+        
+    </ul>
+    <br />
+    </section>
+    </div>
 
 <Navbar />
-
-</div>)
+</>
+)
 }
 
 export default HelpPage;

@@ -69,8 +69,9 @@ const Home = ({ nombrelogin }) => {
           </li>
         </ul>
       </div>
-
-      <Navbar/>
+      
+    
+    <Navbar className="fixed-navbar" />
       
     </div>
   );

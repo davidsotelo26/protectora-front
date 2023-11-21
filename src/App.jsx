@@ -14,7 +14,7 @@ import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResu
 
 function App() {
   return (
-    <div className="container">
+    <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Splash />} />

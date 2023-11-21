@@ -9,6 +9,7 @@ import Home from "./Pages/Home/Home";
 import MasPage from "./Pages/Mas/mas";
 import Donaciones from "./Pages/donaciones/donaciones";
 import ProfilePage from "./Pages/profilepage/profilepage";
+import Filters from "./Pages/Filters/filters";
 import HelpPage from "./Pages/helpPage/helpPage";
 import Filtros from "./Pages/filtrosBusqueda/Filtros";
 import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResumen";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/mas" element={<MasPage />} />
           <Route path="/donaciones" element={<Donaciones />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/filters" element={<Filters />} />
           <Route path="/help" element={<HelpPage />} />
           <Route path="/adoptionstatus" element={<EstadoAdopcionResumen />} />
         </Routes>

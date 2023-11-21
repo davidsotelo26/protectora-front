@@ -1,8 +1,7 @@
-import "./filters.scss";
+import "./animalGallery.scss";
 import mS from "../../../src/assets/dentro/mS.png";
 import buscar from "../../../src/assets/dentro/buscar.png";
 import perro from "../../../src/assets/Primarios/perrop.png";
-import filtros from "../../../src/assets/Secundarios/filtros.png";
 import ave from "../../../src/assets/Primarios/ave.png";
 import ovalC from "../../../src/assets/ovalCopy.png";
 import oval from "../../../src/assets/oval.png";

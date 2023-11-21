@@ -10,13 +10,13 @@ import MasPage from "./Pages/Mas/mas";
 import Donaciones from "./Pages/donaciones/donaciones";
 import ProfilePage from "./Pages/profilepage/profilepage";
 import PetProfile from "./Pages/PetProfile/petProfile";
-import Filters from "./Pages/Filters/filters";
+import Filters from "./Pages/animalGallery/animalGallery";
 import HelpPage from "./Pages/helpPage/helpPage";
 import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResumen";
 import FormularioAdopcion from "./Pages/FormularioAdopcion/FormularioAdopcion";
 import EstadoAdopcionAdicional from "./Pages/EstadoAdopcionPage/EstadoAdopcionAdicional";
 import EstadoAdopcionCita from "./Pages/EstadoAdopcionPage/EstadoAdopcionCita";
-import AnimalGallery from "./Pages/Filters/filters";
+import AnimalGallery from "./Pages/animalGallery/animalGallery";
 
 function App() {
   return (

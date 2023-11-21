@@ -6,13 +6,11 @@ import filtros from "../../../src/assets/Secundarios/filtros.png";
 import ave from "../../../src/assets/Primarios/ave.png";
 import ovalC from "../../../src/assets/ovalCopy.png";
 import oval from "../../../src/assets/oval.png";
-import linea from "../../../src/assets/linea.png";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { getAnimals } from "../../Services/Animals";
 import Navbar from "../../Components/navbar/navbar"
 
-const Filters = () => {
+const AnimalGallery = () => {
 
     const [allAnimals, setAllAnimals] = useState([]);
     const [filteredAnimals, setFilteredAnimals] = useState([]);
@@ -39,71 +37,88 @@ const Filters = () => {
   }
 
   return (
-    <div className="filters__container">
-      <div class="div_button">
-        <input class="button" type="text" placeholder="Buscar"></input>
-        <img src={buscar} alt=""></img>
-        <div class="masc">
-          <h2 class="texto">Mis mascotas</h2>
-          <img src={mS} class="mas" alt=""></img>
+    <div className="AnimalFilterContainer">
+
+<header className="header">
+      <div class="inputHeader">
+        <input class="button" type="text" placeholder={"    Buscar"}/>
+        <img src={buscar} alt=""/>
         </div>
-        <p class="div_p">Accede al perfil de tus mascotas</p>
+
+        <div class="textoHeader">
+          <div className="textoHeader1">
+            <h2>Mis mascotas</h2>
+            <img src={mS} alt=""/>
+          </div>
+          <div className="textoHeader2">
+            <p>Accede al perfil de tus mascotas</p>
+          </div>
+        </div>
+
+      <div className="botonesHeader">
+
+        <div className="botones"> 
+          <button className="botonHeader">
+            <img src={perro} alt="" />
+            <p>Apolo</p>
+          </button>
+
+          <button className="botonHeader">
+            <img src={ave} alt="" />
+            <p>Kiko</p>
+          </button>
+
+          <button className="botonHeader">
+            <img src={ave} alt="" />
+            <p>Dali</p>
+          </button>
+        </div>
+
+        <div className="puntosHeader">
+        
+        <img className="pto" src={ovalC} alt="" />
+        <img className="pto" src={oval} alt="" />
+        <img className="pto" src={ovalC} alt="" />
+      
+        </div>
+
       </div>
 
-      <div className="btns">
-        <button className="btn">
-          <img className="img" src={perro} alt="" />
-          <p className="pButton">Apolo</p>
-        </button>
-        <button className="btn">
-          <img className="img" src={ave} alt="" />
-          <p className="pButton">Kiko</p>
-        </button>
-        <button className="btn">
-          <img className="img" src={ave} alt="" />
-          <p className="pButton">Dali</p>
-        </button>
-      </div>
+      
+</header>
 
-      <div className="points">
-        <div>
-          <img className="pto" src={ovalC} alt="" />
-        </div>
-        <div>
-          <img className="pto" src={oval} alt="" />
-        </div>
-        <div>
-          <img className="pto" src={ovalC} alt="" />
-        </div>
-      </div>
+<body className="body">      
 
-      <div className="line">
-        <img className="d_line" src={linea} alt="" />
-      </div>
-    <button><img className="filtrado" scr={filtros} alt=""/></button>
-    <div>
+    
+      
       <select name="city" id="city" onChange={handleSelect}>
-            <option value="all">All</option>
-            <option value="Madrid">Madrid</option>
-            <option value="Barcelona">Barcelona</option>
-            <option value="Aranjuez">Aranjuez</option>
-            <option value="Oviedo">Oviedo</option>
-        </select>
-    </div>
+          <option value="all">All</option>
+          <option value="Madrid">Madrid</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Aranjuez">Aranjuez</option>
+          <option value="Oviedo">Oviedo</option>
+      </select>
+    
     <div>
-        {filteredAnimals.map((animal) =>{
-            return <div>
-                <img src={animal.image} alt=""  width="150px"/>
-                <p>{animal.name}</p>
-                <p>City: {animal.city}</p>
-            </div>
+      
+      {filteredAnimals.map((animal) =>{
+        return  <div  className="animalBody">
+                  <img src={animal.image} alt=""  width="150px"/>
+                  <div className="infoanimal">
+                  <p className="nombreanimal">{animal.name}</p>
+                  <p className="ciudadanimal">{animal.city}</p>
+                  </div>
+                </div>
         } )
             }
     </div>
 
+</body>
+
+<Navbar/>
     </div>
     
   );
 }
 
-export default Filters;
+export default AnimalGallery;

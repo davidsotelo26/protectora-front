@@ -1,127 +1,152 @@
-*{
+* {
     margin: 0px;
     box-sizing: unset;
     text-decoration:none;
 }
-.filters__container{
+
+.AnimalFilterContainer {
+    width: 100vw;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    .div_button{
-        width: 300px;
-        height: 30px;
-        justify-content: center;
-        align-items: center;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        border: solid 1px;
-        border-color: #01748E;
-        border-radius: 30px;
-        
+    header {
 
-        .button{
-            width: 80%;
-            height: 10px;
-            background-color: #F2F2F2;
-            border-radius: 30px;
-            border: solid 1px;
-            border-color: #01748E;
-            font-size: 14px;
-            font-weight: bold;
-            color: #000000;
-            cursor: pointer;
-            &:hover{
-            background-color: #E0E0E0;
+        .inputHeader{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+
+
+            input {
+                width: 80vw;
+                height: 2vh;
+                border-radius: 10px;
+                border: 1px solid #01748E;
+            
+                ::placeholder {
+                    padding-right: 10px;
+                }
+
+                img {
+                    width: 8px;
+                    object-fit: contain;
+                }
             }
-        ::placeholder{
-            font-size: 10px;
-            text-justify: center;
         }
 
-    }
-    .masc{
+        .textoHeader {
         display: flex;
-        width: 100%;
-        height: 20px;
-        margin-top: 20px;
-        margin-bottom: 5px;
-    }
-    .texto{
-        color:#01748E;
-        font-size: 12px;
-        padding-top: 5px;
+        flex-direction: column;
 
-    }
-    .mas{
-        width: 20px; 
-        height: 21px;
-        margin-left: 10px;      
-    }
-    .div_p{
-        font-size: 9px;
-    }
-}
-    .btns{
+            .textoHeader1{
+
+                display: flex;
+                flex-direction: row;
+            h2 {
+                color: #01748E;
+                font-size: 1.5rem;
+            }
+
+            img {
+                margin-left: 0.5rem;
+            }
+        }
+
+        .textoHeader2{
+            margin-bottom: 1rem;
+            p {
+                font-size: 12px;
+            }
+        }
+        }
+
+.botonesHeader {
+
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ 
+    
+
+    .botones{
+        width: 80vw;
+        height: 5vh;
         display: flex;
-        flex-wrap: wrap ;
         flex-direction: row;
-        align-items: center;
+        justify-content: space-around;  
+    }
+
+    .botonHeader {
+        width: 20vw;
+        height: 8vh;
+        border-radius: 10px;
+        border: 1px solid #01748E;
+        background-color: #BDD2D6;
+        color: #01748E;
+            }
+        }
+    }
+
+    body{
+        margin-bottom: 5rem;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 
 
-            .btn{
-                margin:10px;
-                width: 65px;
-                height: 65px;
-                border-radius: 8px;
-                border: solid 1px;
-                border-color: #01748E;
-                font-size: 20px;
+        select {
+            width: 60vw;
+            background-color: white;
+            border: 1px solid #01748E;
+            color: #01748E;
+            font-weight: bold;
+
+            margin-bottom: 1rem;
+        }
+
+
+        .animalBody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-bottom: 1rem;
+
+            border: 1px solid #01748E;
+            color: #01748E;
+            width: 90vw;
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .infoanimal{
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
+                align-items: center;
+                
+            
+            .nombreanimal {
+                font-size: 1.5rem;
                 font-weight: bold;
-                color: #000000;
-                cursor: pointer;
-                background: #F2F2F2;
-                &:hover{
-                    background-color: #E0E0E0;
-                }
-                .pButton{
-                    font-size: 10px;
-                    color: #01748E;
-                }
-                .img{
-                        width: 25px;
-                        height: 25px;
-                        float: inline-start;
-                }
-
-
-    }
-}
-    .points{
-        display: flex;
-        justify-content: center;
-        .pto{
-            width: 6px;
-            height: 6px;
-            margin-left: 3px;
-            margin-right: 3px;
+            }
+            }
         }
-    }
 
-    .line{
-        width: 300px;
-        height: 2px;
-        background-color: #E0E0E0;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        justify-content: center;
-        .d_line{
-            width: 100px;
-            height: 2px;
-            background-color: #01748E;
-        }
     }
 }        

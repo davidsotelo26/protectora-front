@@ -58,7 +58,7 @@ const FormularioAdopcion = () => {
   };
 
   return (
-    <div>
+    <div className='containerFormularioAdopcion'>
        {step === 1 && (
         <div>
     

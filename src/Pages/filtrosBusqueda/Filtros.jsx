@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { getCharacter, handleSearch } from './array.js';
 import "./Filtros.scss";
 const iconos = require.context("../../assets", true);
 
 function Filtros() {
     const [searchTerm, setSearchTerm] = useState({ city: "", especies: "", edad: "", genre: "", size: "" });
+    const [characters, setCharacters] = useState([]);
     const navigate = useNavigate();
 
-    const finishSearch = () => {
-        console.log(searchTerm);
-    };
+    useEffect(() => {
+        const fetchCharacter = async () => {
+            const api = await getCharacter();
+            setCharacters(api);
+        }
+        fetchCharacter();
+    }, []);
 
     const handleButtonSize = (value) => {
         setSearchTerm({ ...searchTerm, size: value })
@@ -130,7 +136,7 @@ function Filtros() {
                     </button>
                 </div>
                 <div id="f-span">
-                    <span onClick={finishSearch}>Aplicar</span>
+                    <span onClick={characters}>Aplicar</span>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Form } from "react-router-dom";
 import Splash from "./Pages/Onboarding/Splash/Splash";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import LoginCover from "./Pages/Login/LoginCover";
@@ -13,8 +13,8 @@ import Filters from "./Pages/Filters/filters";
 import HelpPage from "./Pages/helpPage/helpPage";
 import Filtros from "./Pages/filtrosBusqueda/Filtros";
 import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResumen";
-
 import FormularioAdopcion from "./Pages/FormularioAdopcion/FormularioAdopcion";
+
 function App() {
   return (
     <div className="App">
@@ -33,6 +33,7 @@ function App() {
           <Route path="/filters" element={<Filters />} />
           <Route path="/help" element={<HelpPage />} />
           <Route path="/adoptionstatus" element={<EstadoAdopcionResumen />} />
+          <Route path="/formulario" element={<FormularioAdopcion />} />
         </Routes>
       </Router>
     </div>

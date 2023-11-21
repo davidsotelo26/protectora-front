@@ -14,6 +14,8 @@ import HelpPage from "./Pages/helpPage/helpPage";
 import Filtros from "./Pages/filtrosBusqueda/Filtros";
 import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResumen";
 import FormularioAdopcion from "./Pages/FormularioAdopcion/FormularioAdopcion";
+import EstadoAdopcionAdicional from "./Pages/EstadoAdopcionPage/EstadoAdopcionAdicional";
+import EstadoAdopcionCita from "./Pages/EstadoAdopcionPage/EstadoAdopcionCita";
 
 function App() {
   return (
@@ -33,7 +35,10 @@ function App() {
           <Route path="/filters" element={<Filters />} />
           <Route path="/help" element={<HelpPage />} />
           <Route path="/adoptionstatus" element={<EstadoAdopcionResumen />} />
+          <Route path="/adoptionstatusaditional" element={<EstadoAdopcionAdicional />} />
+          <Route path="/adoptionstatuscita" element={<EstadoAdopcionCita />} />
           <Route path="/formulario" element={<FormularioAdopcion />} />
+          
         </Routes>
       </Router>
     </div>

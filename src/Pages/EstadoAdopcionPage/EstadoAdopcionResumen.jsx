@@ -17,13 +17,26 @@ const EstadoAdopcion = () => {
     
     <header className="header">
         <div className="titulo">
-            <img className="arrow" src={arrowIcon} alt="arrow" />
+        <Link to="/home">
+            <img className="arrow" src={arrowIcon} alt="house" />
+            </Link>
             <h2>Adopcion de "animal"</h2>
             </div>
         <div className="navbarEstadoAdopcion">
+            
+            <Link to="/adoptionstatus">
             <p>Resumen</p>
+            </Link>
+
+            <Link to="/adoptionstatusaditional">
             <p>Info Adicional</p>
+            </Link>
+
+            <Link to="/adoptionstatus">
             <p>Adopción</p>
+            </Link>
+            
+            
         </div>
     </header>
     

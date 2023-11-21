@@ -1,24 +1,151 @@
-#filter{
-    width: 100vw;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#filter-container {
 
-    #f-title{
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 1rem;
+    margin-top: 40px;
+
+    .close-btn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        margin: 5px;
     }
 
-    .f-input{
-        margin: 1rem;
-        width: 80%;
-    }
+    #filter {
+        width: 90vw;
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
 
-    .f-para{
-        font-size: 1rem;
-        margin: 1rem;
+        #f-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(1 116 142);
+            margin-left: 130px;
+        }
+
+        .f-input {
+            width: 70vw;
+            height: 30px;
+            margin-bottom: 10px;
+            border: 3px solid white;
+            border-bottom: 1px solid rgb(189 210 214);
+            margin-top: 20px;
+            font-size: 12px;
+            align-items: start;
+            color: rgb(250 156 147);
+        }
+
+        .f-para {
+            font-size: 1rem;
+            margin: 1rem;
+            color: rgb(1 116 142);
+            text-align: left;
+        }
+
+        .f-b-filters {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        #f-btn {
+            width: 67px;
+            height: 73px;
+            margin: 5px;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid rgb(1, 116, 142);
+            background-color: white;
+            color: rgb(1, 116, 142);
+            
+            &__especie {
+                width: 67px;
+                height: 73px;
+                margin: 5px;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                border: 1px solid rgb(1, 116, 142);
+                background-color: white;
+                color: rgb(1, 116, 142);
+
+                &:hover {
+                    border: 1px solid rgb(250 156 147);
+                    background-color: white;
+                    color: rgb(250 156 147);
+                }
+            }
+
+            &__genre {
+                width: 67px;
+                height: 73px;
+                margin: 5px;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                border: 1px solid rgb(1, 116, 142);
+                background-color: white;
+                color: rgb(1, 116, 142);
+
+                &:hover {
+                    border: 1px solid rgb(250 156 147);
+                    background-color: white;
+                    color: rgb(250 156 147);
+                }
+            }
+
+            &__size {
+                width: 67px;
+                height: 73px;
+                margin: 5px;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                border: 1px solid rgb(1, 116, 142);
+                background-color: white;
+                color: rgb(1, 116, 142);
+
+                &:hover {
+                    border: 1px solid rgb(250 156 147);
+                    background-color: white;
+                    color: rgb(250 156 147);
+                }
+            }
+        }
+        
+    }
+    #f-span{
+        width: 333px;
+        height: 40px;
+        margin-top: 25px;
+        border-radius: 4px;
+        display: flex;
+        color: white;
+        background-color: rgb(250 156 147);
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+
     }
 }

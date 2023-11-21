@@ -11,6 +11,7 @@ import Home from "./Pages/Home/Home";
 import MasPage from "./Pages/Mas/mas";
 import Donaciones from "./Pages/donaciones/donaciones";
 import ProfilePage from "./Pages/profilepage/profilepage";
+import Filters from "./Pages/Filters/filters";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/mas" element={<MasPage />} />
           <Route path="/donaciones" element={<Donaciones />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/filters" element={<Filters />} />
 
         </Routes>
       </Router>

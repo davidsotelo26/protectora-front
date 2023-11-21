@@ -8,7 +8,6 @@ import botonNotificaciones from "../../../src/assets/perfil/notificaciones.png";
 import botonAdopciones from "../../../src/assets/perfil/mascota.png";
 import botonApadrinar from "../../../src/assets/perfil/apadrina.png";
 import botonDonar from "../../../src/assets/perfil/donar.png";
-import fotoPerro from "../../../src/assets/dentro/Rocky.png";
 import flecha from "../../../src/assets/perfil/arrow.png";
 import { Link } from "react-router-dom";
 

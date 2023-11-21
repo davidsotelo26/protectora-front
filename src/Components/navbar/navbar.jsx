@@ -60,11 +60,11 @@ const Navbar = () => {
 onclick={() => cambioClaseHome} />
 </Link>
 
-<Link to="/navbar">
+<Link to="/map">
 <img className="botonmapablue" src={imageClassMapa} alt="botonmapablue" onclick={() => cambioClaseMapa}/>
 </Link>
 
-<Link to="/navbar">
+<Link to="/home">
 <img className="botonmascotasblue" src={imageClassMascotas} alt="botonmascotasblue" onclick={() => cambioClaseMascotas}/>
 </Link>
 

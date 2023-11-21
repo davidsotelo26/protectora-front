@@ -7,11 +7,9 @@
   list-style-type: none;
 }
 
-html, body, #root, .container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html, body, #root, .App {
+  width: 390px;
+  height: auto;
 }
 
 ::-webkit-scrollbar {
@@ -32,12 +30,18 @@ html, body, #root, .container {
   background: rgb(1, 116, 142);
 }
 
-.container {
+.App {
   @media (max-width: 375px) {
     width: 375px;
   }
 
   @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.desktop {
+  @media (min-width: 992px) {
     width: 100%;
   }
 }

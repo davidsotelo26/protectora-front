@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    box-sizing: unset;
+    text-decoration:none;
+}
+.filters__container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .div_button{
+        width: 350px;
+        justify-content: center;
+        align-items: center;
+
+        .button{
+            width: 100%;
+            height: 30px;
+            background-color: #F2F2F2;
+            border-radius: 30px;
+            border: solid 1px;
+            border-color: #01748E;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000000;
+            cursor: pointer;
+            &:hover{
+            background-color: #E0E0E0;
+            }
+        ::placeholder{
+            font-size: 10px;
+            text-justify: center;
+        }
+
+    }
+    .masc{
+        display: flex;
+        width: 100%;
+        height: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .texto{
+        color:#01748E;
+        font-size: 12px;
+        padding-top: 5px;
+
+    }
+    .mas{
+        width: 20px; 
+        height: 21px;
+        margin-left: 10px;      
+    }
+    .div_p{
+        font-size: 9px;
+    }
+}
+    .btns{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+            
+            .btn{
+                margin:10px;
+                width: 25px;
+                height: 35px;
+                border-radius: 10px;
+                border: solid 1px;
+                border-color: #01748E;
+                font-size: 20px;
+                font-weight: bold;
+                color: #000000;
+                cursor: pointer;
+                background: #F2F2F2;
+                &:hover{
+                    background-color: #E0E0E0;
+                }
+                .pButton{
+                    font-size: 10px;
+                    color: #01748E;
+                }
+                .img{
+                        width: 25px;
+                        height: 25px;
+                        float: inline-start;
+                }
+                
+
+    }
+}
+    .points{
+        display: flex;
+        justify-content: center;
+        .pto{
+            width: 6px;
+            height: 6px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+    }
+
+    .line{
+        width: 300px;
+        height: 2px;
+        background-color: #E0E0E0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+        .d_line{
+            width: 100px;
+            height: 2px;
+            background-color: #01748E;
+        }
+    }
+}        
+    
+
+
+

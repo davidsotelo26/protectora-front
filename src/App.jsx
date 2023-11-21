@@ -1,5 +1,4 @@
 import "./App.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Splash from "./Pages/Onboarding/Splash/Splash";
 import Onboarding from "./Pages/Onboarding/Onboarding";
@@ -12,6 +11,8 @@ import Donaciones from "./Pages/donaciones/donaciones";
 import ProfilePage from "./Pages/profilepage/profilepage";
 import HelpPage from "./Pages/helpPage/helpPage";
 import Filtros from "./Pages/filtrosBusqueda/Filtros";
+import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResumen";
+
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/donaciones" element={<Donaciones />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/help" element={<HelpPage />} />
+          <Route path="/adoptionstatus" element={<EstadoAdopcionResumen />} />
         </Routes>
       </Router>
     </div>

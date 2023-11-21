@@ -1,0 +1,17 @@
+[
+    { "geocode": [40.43404, -3.65878],
+    "popUp": "Cafeteria C&C"
+    },
+    { "geocode": [40.42052, -3.68735],
+    "popUp": "El Perro y La Galleta Retiro"
+    },
+    { "geocode": [40.43373, -3.70279],
+    "popUp": "Perrachica"
+    },
+    { "geocode": [40.42704, -3.70917],
+    "popUp": "Federal Café Madrid"
+    },
+    { "geocode": [40.41584, -3.70816],
+    "popUp": "Restaurante Arrabal"
+    }
+]

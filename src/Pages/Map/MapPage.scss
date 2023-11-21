@@ -28,7 +28,7 @@
     margin-top: 16pt;
     box-sizing: border-box;
     padding-left: 10pt;
-    padding-right: 10pt;
+    padding-right: 30pt;
     background: url(../../assets/dentro/buscar.png) no-repeat right;
     background-position: 95%;
     font-size: 8pt;
@@ -47,3 +47,13 @@
     flex-direction: row;
     
 }
+
+.popup {
+    position: absolute;
+    top: 50px; /* Ajusta la posición según sea necesario */
+    left: 50px; /* Ajusta la posición según sea necesario */
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }

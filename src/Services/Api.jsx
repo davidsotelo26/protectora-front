@@ -1,27 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { getCharacter, handleSearch } from './array.js';
+import { getAnimals } from './Animals.js';
 
 function Api() {
-    const [characters, setCharacters] = useState([]);
-    const [filteredCharacters, setFilteredCharacters] = useState([]);
+    const [animals, setAnimals] = useState([]);
 
     useEffect(() => {
-        const fetchCharacter = async () => {
-            const api = await getCharacter();
-            setCharacters(api);
+        const fetchAnimal = async () => {
+            const api = await getAnimals();
+            setAnimals(api);
         } 
-        fetchCharacter();
-    }, []);
+        fetchAnimal();
+        animals.map((animal) => {
+            console.log(animal);
+            return animal;
+        })
+    }, [animals]);
 
-    const search = (searchTerm) => {
-        const filtered = handleSearch(characters, searchTerm);
-        setFilteredCharacters(filtered);
-    }
-    filteredCharacters.map((character) => (
-        <div>
-            <h1>{character.name}</h1>
-        </div>
-    ))
     return (
         <div>
             <h1>Api</h1>

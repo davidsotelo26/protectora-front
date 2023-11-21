@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import { getCharacter, handleSearch } from './array.js';
+import { getAnimals } from '../../Services/Animals';
 import "./Filtros.scss";
 const iconos = require.context("../../assets", true);
 
@@ -11,8 +11,13 @@ function Filtros() {
 
     useEffect(() => {
         const fetchCharacter = async () => {
-            const api = await getCharacter();
-            setCharacters(api);
+            try {
+                const api = await getAnimals();
+                console.log(api);
+                setCharacters(api);
+            } catch (error) {
+                console.error('Hubo un problema con la petición Fetch:', error);
+            }
         }
         fetchCharacter();
     }, []);

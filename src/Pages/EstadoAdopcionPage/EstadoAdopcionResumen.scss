@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    --bs-gutter-x: 0px;
+    --bs-gutter-y: 0px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+
+    header {
+        background-color: red;
+        height: 10vh;
+        width: 100vw;
+
+        .titulo {
+            display: flex;
+            flex-direction: row;
+
+            .arrow{
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}

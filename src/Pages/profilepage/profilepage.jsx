@@ -25,7 +25,7 @@ const ProfilePage = () => {
 </button>
 </Link>
 
-<Link to="/mapa">
+<Link to="/map">
 <button className="botonMapa">
     <img src={botonMapa} alt="" />
     <p className="pButton">Localizaciones</p>
@@ -49,7 +49,7 @@ const ProfilePage = () => {
 </button>
 </Link>
 
-<Link to="/adopciones">
+<Link to="/adoptionstatus">
 <button className="botonAdopciones">
     <img src={botonAdopciones} alt="" />
     <p className="pButton">Adopciones</p>

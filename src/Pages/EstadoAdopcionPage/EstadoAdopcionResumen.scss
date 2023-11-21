@@ -13,18 +13,154 @@
     flex-direction: column;
 
 
-    header {
-        background-color: red;
-        height: 10vh;
+    .header {
+        height: 20vh;
         width: 100vw;
+        border-bottom: 1px solid #01748E;
 
         .titulo {
             display: flex;
             flex-direction: row;
+            align-items: center;
+            height: 10vh;
+            color: #01748E;
 
             .arrow{
                 transform: rotateY(180deg);
+                width: 32px;
+                object-fit: contain;
+                margin-right: 5vw;
+                margin-left: 5vw;
+                
+            }
+        }
+
+        .navbarEstadoAdopcion {
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            p{
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                color: #01748E;
             }
         }
     }
-}
+
+    body {
+
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .animal {
+            height: 20vh;
+            width: 90vw;
+            border: 1px solid #01748E;
+            border-radius: 20px;
+            margin-top: 5vh;
+        
+            .nombreanimal {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 3vw;
+
+                h3{
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-top: 10px;
+                }
+
+                p{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+    
+            .infoanimal {
+                height: 15vh;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                
+
+                p{
+                    margin-bottom: 2vh;
+                }
+                .fotoInfo {
+                    width: 128px;
+                    height: 128px;
+                    object-fit: cover;
+                    border-radius: 100px;
+                }
+            }
+        }
+        .infoprotectora {
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            height: 20vh;
+            width: 90vw;
+            border: 1px solid #01748E;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            
+        
+        .fotoInfo {
+            width: 128px;
+            height: 128px;
+            object-fit: cover;
+            border-radius: 100px;
+        }
+
+        .datosInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        p{
+            margin-top: 1vh;
+        }
+    }
+
+    .contacto {
+        height: 10vh;
+        width: 90vw;
+        border: 1px solid #01748E;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        .texto{
+            color: #01748E;
+            font-weight: bold;
+            margin-bottom: 1vh;
+        }
+
+        .iconos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            }
+        }
+    }
+}   

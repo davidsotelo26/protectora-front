@@ -10,9 +10,12 @@
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    padding-left: 0px;
+    padding-left: 4vh;
 
-
+    p{
+        margin-bottom: 5vh 
+    }
+    
 }
 
 ul{
@@ -20,14 +23,13 @@ ul{
 }  
 
 h1{
+    display: flex;
+    text-align: right;
     color: #01748E;
-    font-size: 20px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 60vw;
-    border-bottom: #01748E 1px solid;
-    text-align: center; 
-    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 32px;
+    justify-content: center;
+    margin-top: 32px;
 }
 
 h3 {
@@ -35,9 +37,6 @@ h3 {
     font-size: 20px;
 }
 
-p{
-    margin-bottom: 5vh 
-}
 
 .contacto {
    margin-bottom: 10vh;

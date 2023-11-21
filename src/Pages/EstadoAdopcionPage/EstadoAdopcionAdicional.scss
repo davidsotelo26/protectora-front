@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+
+    .header {
+        height: 20vh;
+        width: 100vw;
+        border-bottom: 1px solid #01748E;
+
+        .titulo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 10vh;
+            color: #01748E;
+
+            .arrow{
+                transform: rotateY(180deg);
+                width: 32px;
+                object-fit: contain;
+                margin-right: 5vw;
+                margin-left: 5vw;
+                
+            }
+        }
+
+        .navbarEstadoAdopcion {
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            p{
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                color: #01748E;
+            }
+        }
+    }
+}

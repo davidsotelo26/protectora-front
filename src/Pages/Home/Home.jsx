@@ -6,11 +6,7 @@ import Chinchillas from "../../assets/dentro/hamster.png";
 import Iguanas from "../../assets/dentro/iguana.png";
 import Boxer from "../../assets/dentro/boxer.png";
 
-import HomeIcon from "../../assets/menu pie/homered.png";
-import MapaIcon from "../../assets/menu pie/mapa.png";
-import MascotaIcon from "../../assets/menu pie/mascota.png";
-import PerfilIcon from "../../assets/menu pie/perfil.png";
-import MasIcon from "../../assets/menu pie/mS.png";
+import Navbar from "../../Components/navbar/navbar";
 
 const Home = ({ nombrelogin }) => {
   return (
@@ -73,14 +69,10 @@ const Home = ({ nombrelogin }) => {
           </li>
         </ul>
       </div>
-
-      <nav className="Navbar">
-        <img src={HomeIcon} alt="Home" />
-        <img src={MapaIcon} alt="Mapa" />
-        <img src={MascotaIcon} alt="Mascota" />
-        <img src={PerfilIcon} alt="Perfil" />
-        <img src={MasIcon} alt="Más" />
-      </nav>
+      
+    
+    <Navbar className="fixed-navbar" />
+      
     </div>
   );
 };

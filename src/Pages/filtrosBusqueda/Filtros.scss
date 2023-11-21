@@ -1,0 +1,24 @@
+#filter{
+    width: 100vw;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    #f-title{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 1rem;
+    }
+
+    .f-input{
+        margin: 1rem;
+        width: 80%;
+    }
+
+    .f-para{
+        font-size: 1rem;
+        margin: 1rem;
+    }
+}

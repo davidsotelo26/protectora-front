@@ -11,6 +11,7 @@ import MasPage from "./Pages/Mas/mas";
 import Donaciones from "./Pages/donaciones/donaciones";
 import ProfilePage from "./Pages/profilepage/profilepage";
 import HelpPage from "./Pages/helpPage/helpPage";
+import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResumen";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/donaciones" element={<Donaciones />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/help" element={<HelpPage />} />
+          <Route path="/adoptionstatus" element={<EstadoAdopcionResumen />} />
         </Routes>
       </Router>
     </div>

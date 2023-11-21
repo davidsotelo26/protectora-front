@@ -1,5 +1,4 @@
 import "./App.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Splash from "./Pages/Onboarding/Splash/Splash";
 import Onboarding from "./Pages/Onboarding/Onboarding";

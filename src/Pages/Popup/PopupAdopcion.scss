@@ -1,0 +1,81 @@
+.divPopupAdopcion {
+  width: 80%;
+  height: 54vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2.5vh;
+  margin-top: 15vh;
+}
+
+.buttonPopupAdopcion {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.h2PopupAdopcion {
+  width: 236px;
+  height: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(1 116 142);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.h3PopupAdopcion {
+  width: 242px;
+  height: 38px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.pPopupAdopcion {
+  width: 236px;
+  height: auto;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.imgPopupAdopcion {
+  width: 236px;
+  height: 130px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.divBotonesPopupAdopcion {
+    margin-top: 28px;
+    width: 322px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(189 210 214);
+
+
+  .buttonPopupAdopcion-One {
+    width: 160px;
+    height: 53px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(244 67 50);
+    border-right: 1px solid rgb(189 210 214);
+    margin-right: 1px;
+  }
+
+  .buttonPopupAdopcion-Two {
+    width: 160px;
+    height: 53px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(189 210 214);
+  }
+}

@@ -7,6 +7,7 @@ const iconos = require.context("../../assets", true);
 function Filtros() {
     const [searchTerm, setSearchTerm] = useState({ city: "", especies: "", edad: "", genre: "", size: "" });
     const [characters, setCharacters] = useState([]);
+    const [filteredCharacters, setFilteredCharacters] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {

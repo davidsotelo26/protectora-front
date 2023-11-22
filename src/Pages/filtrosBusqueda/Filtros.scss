@@ -56,6 +56,8 @@
             justify-content: flex-start;
         }
 
+
+
         #f-btn {
             width: 67px;
             height: 73px;
@@ -69,7 +71,7 @@
             border: 1px solid rgb(1, 116, 142);
             background-color: white;
             color: rgb(1, 116, 142);
-            
+
             &__especie {
                 width: 67px;
                 height: 73px;
@@ -84,7 +86,16 @@
                 background-color: white;
                 color: rgb(1, 116, 142);
 
-                &:hover {
+                &--selected {
+                    width: 67px;
+                    height: 73px;
+                    margin: 5px;
+                    font-size: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
                     border: 1px solid rgb(250 156 147);
                     background-color: white;
                     color: rgb(250 156 147);
@@ -104,12 +115,6 @@
                 border: 1px solid rgb(1, 116, 142);
                 background-color: white;
                 color: rgb(1, 116, 142);
-
-                &:hover {
-                    border: 1px solid rgb(250 156 147);
-                    background-color: white;
-                    color: rgb(250 156 147);
-                }
             }
 
             &__size {
@@ -125,17 +130,11 @@
                 border: 1px solid rgb(1, 116, 142);
                 background-color: white;
                 color: rgb(1, 116, 142);
-
-                &:hover {
-                    border: 1px solid rgb(250 156 147);
-                    background-color: white;
-                    color: rgb(250 156 147);
-                }
             }
         }
-        
     }
-    #f-span{
+
+    #f-span {
         width: 333px;
         height: 40px;
         margin-top: 25px;

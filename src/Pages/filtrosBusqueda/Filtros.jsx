@@ -4,7 +4,7 @@ import { getAnimals } from '../../Services/Animals';
 import "./Filtros.scss";
 const iconos = require.context("../../assets", true);
 
-function Filtros() {
+function FiltrosBusqueda() {
     const [searchTerm, setSearchTerm] = useState({ city: "", especies: "", edad: "", genre: "", size: "" });
     const [characters, setCharacters] = useState([]);
     const [filteredCharacters, setFilteredCharacters] = useState([]);
@@ -31,17 +31,26 @@ function Filtros() {
         setSearchTerm({ ...searchTerm, genre: value })
     };
 
-    const handleButtonSpecie = (value) => {
+    const handleButtonSpecie = (event) => {
+        const value = event.target.innerText;
         setSearchTerm({ ...searchTerm, especies: value })
+        // console.log(event.target.id);
+        // event.target.className = "selected"
+        if (event.target.id === "f-btn__especie") {
+            event.target.id = "f-btn__especie--selected"
+        } else {
+            event.target.id = "f-btn__especie"
+        }
     };
 
     const handleSearch = (event) => {
         const value = event.target.value;
+        console.log(event);
         setSearchTerm({ ...searchTerm, [event.target.name]: value });
     };
     const handleButtonClick = () => {
         navigate('/logincover');
-    }
+    };
 
     return (
         <div id="filter-container">
@@ -61,47 +70,47 @@ function Filtros() {
 
                 <p className="f-para">Especie</p>
                 <div className="f-b-filters" >
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Perro")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/perrop.png")} alt="perro" />
                         Perro
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Gato")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/cat.png")} alt="gato" />
                         Gato
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Conejo")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/conejo.png")} alt="conejo" />
                         Conejo
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Cobaya")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/067Hamster.png")} alt="cobaya" />
                         Cobaya
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Pequeño mamifero")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/CoatiCopy.png")} alt="coati" />
                         Pequeño mamifero
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Huron")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/huron.png")} alt="huron" />
                         Hurón
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Pez")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/fish2.png")} alt="pez" />
                         Pez
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Reptil")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/snake.png")} alt="reptil" />
                         Reptil
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Anfibio")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/anfibio.png")} alt="anfibio" />
                         Anfibio
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Aracnido o insecto")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/aracnido.png")} alt="aracnido" />
                         Arácnido o insecto
                     </button>
-                    <button id="f-btn__especie" onClick={() => handleButtonSpecie("Ave")}>
+                    <button id="f-btn__especie" onClick={handleButtonSpecie}>
                         <img className="f-img" src={iconos("./Primarios/ave.png")} alt="ave" />
                         Ave
                     </button>
@@ -149,4 +158,5 @@ function Filtros() {
     )
 }
 
-export default Filtros
+
+export default FiltrosBusqueda;

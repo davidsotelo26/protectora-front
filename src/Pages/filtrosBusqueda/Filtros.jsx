@@ -23,17 +23,6 @@ function Filtros() {
         fetchCharacter();
     }, []);
 
-    useEffect(() => {
-        const results = characters.filter(character =>
-            character.city.toLowerCase().includes(searchTerm.city.toLowerCase()) &&
-            character.especie.toLowerCase().includes(searchTerm.especies.toLowerCase()) &&
-            character.edad.toLowerCase().includes(searchTerm.edad.toLowerCase()) &&
-            character.genre.toLowerCase().includes(searchTerm.genre.toLowerCase()) &&
-            character.size.toLowerCase().includes(searchTerm.size.toLowerCase())
-        );
-        setFilteredCharacters(results);
-    }, [characters, searchTerm]);
-
     const handleButtonSize = (value) => {
         setSearchTerm({ ...searchTerm, size: value })
     };

@@ -1,15 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { getAnimals } from '../../Services/Animals';
 import "./Filtros.scss";
 const iconos = require.context("../../assets", true);
 
 function Filtros() {
     const [searchTerm, setSearchTerm] = useState({ city: "", especies: "", edad: "", genre: "", size: "" });
+    const [characters, setCharacters] = useState([]);
+    const [filteredCharacters, setFilteredCharacters] = useState([]);
     const navigate = useNavigate();
 
-    const finishSearch = () => {
-        console.log(searchTerm);
-    };
+    useEffect(() => {
+        const fetchCharacter = async () => {
+            try {
+                const api = await getAnimals();
+                console.log(api);
+                setCharacters(api);
+            } catch (error) {
+                console.error('Hubo un problema con la petición Fetch:', error);
+            }
+        }
+        fetchCharacter();
+    }, []);
+
+    useEffect(() => {
+        const results = characters.filter(character =>
+            character.city.toLowerCase().includes(searchTerm.city.toLowerCase()) &&
+            character.especie.toLowerCase().includes(searchTerm.especies.toLowerCase()) &&
+            character.edad.toLowerCase().includes(searchTerm.edad.toLowerCase()) &&
+            character.genre.toLowerCase().includes(searchTerm.genre.toLowerCase()) &&
+            character.size.toLowerCase().includes(searchTerm.size.toLowerCase())
+        );
+        setFilteredCharacters(results);
+    }, [characters, searchTerm]);
 
     const handleButtonSize = (value) => {
         setSearchTerm({ ...searchTerm, size: value })
@@ -130,7 +153,7 @@ function Filtros() {
                     </button>
                 </div>
                 <div id="f-span">
-                    <span onClick={finishSearch}>Aplicar</span>
+                    <span onClick={characters}>Aplicar</span>
                 </div>
             </div>
         </div>

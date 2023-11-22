@@ -2,9 +2,18 @@ import { React, useEffect, useState } from "react";
 import Navbar from "../../Components/navbar/navbar";
 import "./MapPage.scss";
 import { Link } from "react-router-dom";
+
+//importacion de iconos para filtros
 import filtericon from "../../assets/Secundarios/filtros.png";
 import searchicon from "../../assets/dentro/buscar.png";
+import veterinario_icon from "../../assets/Primarios/veterinario.png";
+import educacion_icon from "../../assets/Primarios/educacion.png";
+import friendly_icon from "../../assets/Primarios/cafe.png";
+import guarderia_icon from "../../assets/Primarios/guarderia.png";
+import peluqueria_icon from "../../assets/Primarios/peluqueria.png";
+import tienda_icon from "../../assets/Primarios/tienda.png";
 
+//importaciones de leaflet y el mapa
 import { MapContainer, TileLayer, Marker, Popup, useMap  } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -63,6 +72,9 @@ const MapPage = () => {
     setPopupVisible(!popupVisible);
   };
 
+  // Estado inicial para filtrar los marcadores por categorías
+  const [selectedCategory, setSelectedCategory] = useState("todos");
+
   //Estado y función para que el mapa se inicie en la ubicación actual
   function LocationMarker() {
     const [position, setPosition] = useState(null);
@@ -105,7 +117,16 @@ const MapPage = () => {
         
       {popupVisible && (
         <div className="popup">
-          <p>Soy un pop-up</p>
+          <div className="filter_title"> <h2>Filters</h2> </div>
+          <div className="filters_container">
+            <div className="filter_container"> <img src={veterinario_icon} alt="veterinario" onClick={() => setSelectedCategory("veterinarios")}/> <p>Veterinarios</p> </div>
+            <div className="filter_container"> <img src={educacion_icon} alt="educacion" onClick={() => setSelectedCategory("educacion")}/> <p>Educación</p> </div>
+            <div className="filter_container"> <img src={peluqueria_icon} alt="peluqueria" onClick={() => setSelectedCategory("peluquerias")}/> <p>Peluquerías</p> </div>
+            <div className="filter_container"> <img src={guarderia_icon} alt="guarderia" onClick={() => setSelectedCategory("guarderias")}/> <p>Guarderías</p> </div>
+            <div className="filter_container"> <img src={friendly_icon} alt="friendly" onClick={() => setSelectedCategory("friendly")}/> <p>Pet-friendly</p> </div>
+            <div className="filter_container"> <img src={tienda_icon} alt="tienda" onClick={() => setSelectedCategory("tiendas")}/> <p>Tiendas</p></div>
+          </div>
+          <div className="filter_buttons_container"> <button id="delete-button" onClick={() => setSelectedCategory("todos")}>Borrar filtros</button> <button id="apply-button" onClick={() => setPopupVisible(false)}>Aplicar</button> </div>
         </div>
       )}
 
@@ -116,34 +137,46 @@ const MapPage = () => {
           />
 
           {veterinarios.map(marker => (
-              <Marker position={marker.geocode} icon={VetIcon}>
+            (selectedCategory === "todos" || selectedCategory === "veterinarios") && (
+              <Marker key={marker.id} position={marker.geocode} icon={VetIcon}>
                 <Popup>{marker.popUp}</Popup>
               </Marker>
+            )
             ))}
           {educacion.map(marker => (
+            (selectedCategory === "todos" || selectedCategory === "educacion") && (
             <Marker position={marker.geocode} icon={EdIcon}>
-            <Popup>{marker.popUp}</Popup>
+              <Popup>{marker.popUp}</Popup>
             </Marker>
+            )
           ))}
           {friendly.map(marker => (
+            (selectedCategory === "todos" || selectedCategory === "friendly") && (
             <Marker position={marker.geocode} icon={FrIcon}>
               <Popup>{marker.popUp}</Popup>
             </Marker>
+            )
           ))}
           {guarderias.map(marker => (
+            (selectedCategory === "todos" || selectedCategory === "guarderias") && (
             <Marker position={marker.geocode} icon={GuardIcon}>
               <Popup>{marker.popUp}</Popup>
             </Marker>
+          )
           ))}
           {peluquerias.map(marker => (
+            (selectedCategory === "todos" || selectedCategory === "peluquerias") && (
             <Marker position={marker.geocode} icon={PeluIcon}>
               <Popup>{marker.popUp}</Popup>
             </Marker>
+            )
           ))}
           {tiendas.map(marker => (
+            (selectedCategory === "todos" || selectedCategory === "tiendas") && (
             <Marker position={marker.geocode} icon={TiendasIcon}>
               <Popup>{marker.popUp}</Popup>
             </Marker>
+            )
           ))}
 
           <LocationMarker />

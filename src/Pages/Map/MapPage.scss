@@ -45,15 +45,81 @@
 .MapSearchBarContainer{
     display: flex;
     flex-direction: row;
-    
 }
 
 .popup {
-    position: absolute;
-    top: 50px; /* Ajusta la posición según sea necesario */
-    left: 50px; /* Ajusta la posición según sea necesario */
-    background-color: white;
+    border-radius: 8pt;
+    height: 30vh;
+    width: 75vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
     padding: 10px;
-    border: 1px solid #ccc;
     z-index: 1000;
-  }
+
+    .filter_title {
+        height: 4vh;
+        text-align: center;
+    }
+
+    .filters_container{
+        height: 22vh;
+        width: 69vw;
+        display: grid;
+        grid-template-columns: repeat(3, 40%);
+        grid-template-rows: repeat(2, 50%);
+        justify-items: stretch;
+    }
+
+    img {
+        align-content: center;
+        height: 24pt;
+        width: 24pt;
+    }
+
+    .filter_container{
+        width: 20vw;
+        height: 6vh;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        border: 1px solid rgb(189, 210, 214);
+        border-radius: 8pt;
+        color: rgb(1, 116, 142);
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .filter_container:hover{
+        color: rgb(245, 166, 35);
+        border: 3pt solid rgb(245, 166, 35);
+    }
+
+    .filter_buttons_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20pt;
+        #delete-button {
+            height: 3vh;
+            width: 20vw;
+            margin-right: 20px;
+            border-radius: 4pt;
+            border-color: rgb(250, 156, 147);
+            background-color: white;
+            color: rgb(250, 156, 147);
+            border-style: solid;
+        }
+        #apply-button {
+            height: 3vh;
+            width: 20vw;
+            border-radius: 4pt;
+            border-style: solid;
+            border-color: rgb(250, 156, 147);
+            background-color: rgb(250, 156, 147);
+            color: white;
+        }
+    }
+}
+

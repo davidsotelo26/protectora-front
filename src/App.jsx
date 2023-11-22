@@ -16,6 +16,7 @@ import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResu
 import FormularioAdopcion from "./Pages/FormularioAdopcion/FormularioAdopcion";
 import EstadoAdopcionAdicional from "./Pages/EstadoAdopcionPage/EstadoAdopcionAdicional";
 import EstadoAdopcionCita from "./Pages/EstadoAdopcionPage/EstadoAdopcionCita";
+import PetProfile from "./Pages/PetProfile/petProfile";
 import AnimalGallery from "./Pages/animalGallery/animalGallery";
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/adoptionstatusaditional" element={<EstadoAdopcionAdicional />} />
           <Route path="/adoptionstatuscita" element={<EstadoAdopcionCita />} />
           <Route path="/formulario" element={<FormularioAdopcion />} />
+          <Route path="/animals/:id" element={<PetProfile />} />
           
         </Routes>
       </Router>

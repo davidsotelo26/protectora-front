@@ -9,25 +9,27 @@ import Home from "./Pages/Home/Home";
 import MasPage from "./Pages/Mas/mas";
 import Donaciones from "./Pages/donaciones/donaciones";
 import ProfilePage from "./Pages/profilepage/profilepage";
-import Filters from "./Pages/Filters/filters";
+import PetProfile from "./Pages/PetProfile/petProfile";
+import Filters from "./Pages/animalGallery/animalGallery";
 import HelpPage from "./Pages/helpPage/helpPage";
-import Filtros from "./Pages/filtrosBusqueda/Filtros";
 import EstadoAdopcionResumen from "./Pages/EstadoAdopcionPage/EstadoAdopcionResumen";
 import FormularioAdopcion from "./Pages/FormularioAdopcion/FormularioAdopcion";
 import EstadoAdopcionAdicional from "./Pages/EstadoAdopcionPage/EstadoAdopcionAdicional";
 import EstadoAdopcionCita from "./Pages/EstadoAdopcionPage/EstadoAdopcionCita";
 import PetProfile from "./Pages/PetProfile/petProfile";
+import AnimalGallery from "./Pages/animalGallery/animalGallery";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
+          <Route path="/petprofile" element={<PetProfile />} />
           <Route path="/" element={<Splash />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/logincover" element={<LoginCover />} />
           <Route path="/loginregister" element={<LoginRegister />} />
-          <Route path="/filter" element={<Filtros />}/>
+          <Route path="/animalgallery" element={<AnimalGallery />}/>
           <Route path="/map" element={<MapPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/mas" element={<MasPage />} />

@@ -1,11 +1,12 @@
 .HomeContainer {
-  width: 390px;
-  height: 100%;
+  width: 93vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding-top: 80px;
   overflow: visible;
+  margin-left: 5px;
 
   h3 {
     font-size: 25px;
@@ -145,7 +146,7 @@
 
   h4 {
     font-size: 16px;
-    width: 333px;
+    width: 350px;
     height: 36px;
     background-color: rgb(250, 156, 147);
     color: rgb(255, 255, 255);
@@ -174,7 +175,7 @@
   }
 
   .Content-img {
-    width: 329px;
+    width: 345px;
     height: 211px;
     border: 2pt solid rgb(250 156 147);
     border-top-left-radius: 6px;

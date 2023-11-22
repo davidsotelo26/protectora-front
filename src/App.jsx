@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Router, Route, Routes, Form } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Splash from "./Pages/Onboarding/Splash/Splash";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import LoginCover from "./Pages/Login/LoginCover";
@@ -17,8 +17,14 @@ import FormularioAdopcion from "./Pages/FormularioAdopcion/FormularioAdopcion";
 import EstadoAdopcionAdicional from "./Pages/EstadoAdopcionPage/EstadoAdopcionAdicional";
 import EstadoAdopcionCita from "./Pages/EstadoAdopcionPage/EstadoAdopcionCita";
 import Galeria from "./Pages/galeria/galeria";
+<<<<<<< HEAD
 import petProfile from "./Pages/PetProfile/petProfile";
 import AnimalGallery from "./Pages/animalGallery/animalGallery";
+=======
+import AnimalGallery from "./Pages/animalGallery/animalGallery";
+import PopupFormulario from "./Pages/Popup/PopupFormulario";
+import PopupEstadoAdopcion from "./Pages/Popup/PopupAdopcion";
+>>>>>>> 16a337ec58dc2008da5f45025273f257a4203a05
 
 function App() {
   return (
@@ -41,10 +47,18 @@ function App() {
           <Route path="/adoptionstatus" element={<EstadoAdopcionResumen />} />
           <Route path="/adoptionstatusaditional" element={<EstadoAdopcionAdicional />} />
           <Route path="/adoptionstatuscita" element={<EstadoAdopcionCita />} />
+<<<<<<< HEAD
           <Route path="/formulario" element={<FormularioAdopcion />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/animals/:id" element={<petProfile />} />
 
+=======
+          <Route path="/form" element={<FormularioAdopcion />} />
+          <Route path="/galery" element={<Galeria />} />
+          <Route path="/animals/:id" element={<PetProfile />} />
+          <Route path="/formsubmitted" element={<PopupFormulario />} />
+          <Route path="/requestadoption" element={<PopupEstadoAdopcion />} />
+>>>>>>> 16a337ec58dc2008da5f45025273f257a4203a05
           
         </Routes>
       </Router>

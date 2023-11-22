@@ -12,7 +12,7 @@ const LoginCover = () => {
           </button>
         </div>
       </Link>
-      <Link>
+      <Link to="/loginregister">
         <div className="loginCoverButtonContainer">
           <button type="button" className="loginCoverButton">
             Asociación protectora

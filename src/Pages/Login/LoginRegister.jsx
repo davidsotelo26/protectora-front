@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import  passwordIcon from "../../assets/ojo.png";
 import ReactDOM from "react-dom";
+import axios from "axios";
 
 
 const LoginRegister = () => {
@@ -31,28 +32,45 @@ const LoginRegister = () => {
     pass: "invalid password"
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-
+console.log("hola");
     var { uname, pass } = document.forms[0];
 
+    const newUser = {
+      email: uname.value,
+      password: pass.value,
+      id: 1,
+      nameSurname: "Javier",
+      dni: "12345678A",
+      phone: "623456789",
+      address: "Calle de la piruleta"
+    };
+
+    const loginUser = {email: uname.value, password: pass.value}
+
+    // const result = await axios.post("http://localhost:3000/users/register", newUser);
+
+    const result = await axios.post("http://localhost:3000/users/login", loginUser);
+
+    console.log(result);
     // encuentra la info del user
-    const userData = database.find((user) => user.username === uname.value);
+    // const userData = database.find((user) => user.username === uname.value);
 
     // compara la info del usuario con la de la base de datos
-    if (userData) {
-      if (userData.password !== pass.value) {
-        // contraseña incorrecta
-        console.log("user no logeao");
-        setErrorMessages({ name: "pass", message: errors.pass });
-      } else {
-        console.log("User logeao");
-        setIsSubmitted(true);
-      }
-    } else {
-      // Username not found
-      setErrorMessages({ name: "uname", message: errors.uname });
-    }
+    // if (userData) {
+    //   if (userData.password !== pass.value) {
+    //     // contraseña incorrecta
+    //     console.log("user no logeao");
+    //     setErrorMessages({ name: "pass", message: errors.pass });
+    //   } else {
+    //     console.log("User logeao");
+    //     setIsSubmitted(true);
+    //   }
+    // } else {
+    //   // Username not found
+    //   setErrorMessages({ name: "uname", message: errors.uname });
+    // }
   };
 
   // mensaje error
@@ -64,7 +82,7 @@ const LoginRegister = () => {
     // JSX code for login form
     const renderForm = (
       <div className="form">
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}> */}
           <div className="input-container">
             <label>Username </label>
             <input type="text" name="uname" required />
@@ -78,7 +96,7 @@ const LoginRegister = () => {
           <div className="button-container">
             <input type="submit" />
           </div>
-        </form>
+        {/* </form> */}
       </div>
     );
     

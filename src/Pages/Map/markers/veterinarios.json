@@ -1,0 +1,17 @@
+[
+    { "geocode": [40.440279717546154, -3.7168459914940133],
+    "popUp": "Centro Veterinario Madrid"
+    },
+    { "geocode": [40.44001841998527, -3.7101511978391213],
+    "popUp": "Clínica Verterinaria Galileo"
+    },
+    { "geocode": [40.42015684324399, -3.697791578652217],
+    "popUp": "Hospital Veterinario Los Madrazo"
+    },
+    { "geocode": [40.41858857388394, -3.7116961502927626],
+    "popUp": "Centro Veterinario Ópera"
+    },
+    { "geocode": [40.40695610418223, -3.715472700599872],
+    "popUp": "Veterinario Paseo Imperial"
+    }
+]

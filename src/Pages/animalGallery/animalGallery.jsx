@@ -25,7 +25,7 @@ const AnimalGallery = () => {
 
   const handleSelect = (e) => {
     const optionFilter = e.target.value;
- 
+
     if (optionFilter === "all") {
         setFilteredAnimals(allAnimals);
         return;
@@ -74,22 +74,20 @@ const AnimalGallery = () => {
         </div>
 
         <div className="puntosHeader">
-        
+
         <img className="pto" src={ovalC} alt="" />
         <img className="pto" src={oval} alt="" />
         <img className="pto" src={ovalC} alt="" />
-      
+
         </div>
 
       </div>
 
-      
+
 </header>
 
-<body className="body">      
+<main className="bodyAnimalGallery">      
 
-    
-      
       <select name="city" id="city" onChange={handleSelect}>
           <option value="all">All</option>
           <option value="Madrid">Madrid</option>
@@ -97,9 +95,8 @@ const AnimalGallery = () => {
           <option value="Aranjuez">Aranjuez</option>
           <option value="Oviedo">Oviedo</option>
       </select>
-    
-    <div>
-      
+
+
       {filteredAnimals.map((animal) =>{
         return  <div  className="animalBody">
                   <img src={animal.image} alt=""  width="150px"/>
@@ -110,13 +107,13 @@ const AnimalGallery = () => {
                 </div>
         } )
             }
-    </div>
+   
 
-</body>
+</main>
 
 <Navbar/>
     </div>
-    
+
   );
 }
 

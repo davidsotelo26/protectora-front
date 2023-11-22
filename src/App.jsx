@@ -42,14 +42,10 @@ function App() {
           <Route path="/adoptionstatus" element={<EstadoAdopcionResumen />} />
           <Route path="/adoptionstatusaditional" element={<EstadoAdopcionAdicional />} />
           <Route path="/adoptionstatuscita" element={<EstadoAdopcionCita />} />
-
           <Route path="/formulario" element={<FormularioAdopcion />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/animals/:id" element={<petProfile />} />
-
-
           <Route path="/form" element={<FormularioAdopcion />} />
-          <Route path="/galery" element={<Galeria />} />
           <Route path="/animals/:id" element={<PetProfile />} />
           <Route path="/formsubmitted" element={<PopupFormulario />} />
           <Route path="/requestadoption" element={<PopupEstadoAdopcion />} />

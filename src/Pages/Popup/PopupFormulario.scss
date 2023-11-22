@@ -1,0 +1,46 @@
+.divPopup {
+  width: 80%;
+  height: 48.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 2.5vh;
+  margin-top: 15vh;
+}
+
+.buttonPopup {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.h2Popup {
+  width: 105px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: rgb(1 116 142);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.pPopup {
+  width: 236px;
+  height: auto;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.imgPopup {
+  width: 161px;
+  height: 166px;
+  margin-top: 30px;
+}

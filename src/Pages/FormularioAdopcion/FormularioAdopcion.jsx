@@ -1,4 +1,5 @@
 import "./FormularioAdopcion.scss";
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import ProgressBar from "../../Components/ProgressBar/ProgressBar";
 import BotonRetroceso from "../../assets/dentro/retroceso.png";
@@ -22,7 +23,10 @@ const FormularioAdopcion = () => {
   const dniRegex = /^[0-9]{8}[A-Za-z]$/;
   const [codigoPostal, setCodigoPostal] = useState("");
   const [aceptoTerminos, setAceptoTerminos] = useState(false);
-
+  const navigate = useNavigate();
+  const handleLastButton = () => {
+    navigate("/formsubmitted");
+  };
 
   // FUNCIONES PARA EL FORMULARIO
 
@@ -78,7 +82,6 @@ const FormularioAdopcion = () => {
 
   return (
     <div className="divFormularioAdopcion">
-
       {/* PUNTO 1 */}
 
       {step === 1 && (
@@ -440,7 +443,11 @@ const FormularioAdopcion = () => {
             </label>
           </div>
 
-          <button button className="buttonFormulario" onClick={handleContinue}>
+          <button
+            button
+            className="buttonFormulario"
+            onClick={handleLastButton}
+          >
             Enviar
           </button>
         </div>

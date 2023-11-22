@@ -3,7 +3,8 @@
     box-sizing: unset;
     text-decoration:none;
 }
-.galeria_container{
+
+.AnimalFilterContainer {
     width: 100vw;
     height: 100%;
 
@@ -144,17 +145,8 @@ justify-content: center;
                 font-size: 1.5rem;
                 font-weight: bold;
             }
-            .persolalidadanimal {
-                font-size: 1.5rem;
-                font-weight: bold;
-            }
-            .nombreanimal {
-                font-size: 1.5rem;
-                font-weight: bold;
-            }
             }
         }
 
     }
-}
-    
+}        

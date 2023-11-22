@@ -105,7 +105,7 @@ const AnimalGallery = () => {
                   <img src={animal.image} alt=""  width="150px"/>
                   <div className="infoanimal">
                   <p className="nombreanimal">{animal.name}</p>
-                  <p className="ciudadanimal">{animal.city}</p>
+                  <p className="historianimal">{animal.city}</p>
                   </div>
                 </div>
         } )

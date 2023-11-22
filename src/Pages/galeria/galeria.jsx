@@ -1,146 +1,97 @@
 import "./galeria.scss";
+import buscar from "../../../src/assets/dentro/buscar.png";
 import filtros from "../../../src/assets/Secundarios/filtros.png";
 import React, { useState, useEffect } from 'react';
+import Navbar from "../../Components/navbar/navbar"
+import { getAnimals } from "../../Services/Animals";
 
 const Galeria = () => {
-    const [filtro, setFiltro] = useState('');
-    const [speciesFilter, setSpeciesFilter] = useState('');
-    const [birthDateFilter, setBirthDateFilter] = useState('');
-    const [sizeFilter, setSizeFilter] = useState('');
-    const [showFilters, setShowFilters] = useState(false);
-    const [animalTypes, setAnimalTypes] = useState([]);
-
     const [allAnimals, setAllAnimals] = useState([]);
     const [filteredAnimals, setFilteredAnimals] = useState([]);
-
-  useEffect(() => {
-    const getAnimalsData = async () => {
-      const animals = await getAnimals();
-      setAllAnimals(animals);
-      setFilteredAnimals(animals);
-    };
-    getAnimalsData();
-  }, []);
-
-  const handleSelect = (e) => {
-    const optionFilter = e.target.value;
- 
-    if (optionFilter === "all") {
-        setFilteredAnimals(allAnimals);
-        return;
-    }
-    const filter = allAnimals.filter((animal) => animal.city === optionFilter);
-
-    setFilteredAnimals(filter);
-  }
-
-    useEffect(() => {
-        getAnimals();
-    }, []);
-
-    async function getAnimals() {
-        const response = await fetch('https://api.example.com/animals');
-        const data = await response.json();
-        return data;
-    }
-
-    const handleClick = (opcion) => {
-        setFiltro(opcion);
-        if (opcion === 'opcion1') {
-            setAnimalTypes(['Perro', 'Gato', 'Otro']);
-        } else {
-            setAnimalTypes([]);
-        }
-    };
-
-    const handleSpeciesFilter = (event) => {
-        setSpeciesFilter(event.target.value);
-    };
-
-    const handleBirthDateFilter = (event) => {
-        setBirthDateFilter(event.target.value);
-    };
-
-    const handleSizeFilter = (event) => {
-        setSizeFilter(event.target.value);
-    };
-
-    const handleToggleFilters = () => {
-        setShowFilters(!showFilters);
-    };
-
-    return (
-<div className="filters__container">
-        <button><img className="filtrado" scr={filtros} alt=""/></button>
-        <div>
-          <select name="city" id="city" onChange={handleSelect}>
-                <option value="all">Categprias</option>
-                <option value="Madrid">Madrid</option>
-                <option value="Barcelona">Barcelona</option>
-                <option value="Aranjuez">Aranjuez</option>
-                <option value="Oviedo">Oviedo</option>
-            </select>
-        </div>
-        <div>
-            {filteredAnimals.map((animal) =>{
-                return <div>
-                    <img src={animal.image} alt=""  width="150px"/>
-                    <p>{animal.name}</p>
-                    <p>City: {animal.city}</p>
-                </div>
-            } )
-                }
-        </div>
-    </div>
+    const [showOptions, setShowOptions] = useState(false);
     
 
+
+    useEffect(() => {
+        const getAnimalsData = async () => {
+            const animals = await getAnimals();
+            setAllAnimals(animals);
+            setFilteredAnimals(animals);
+        };
+        getAnimalsData();
+        console.log(getAnimalsData);
+    }, []);
+
+    const animalInput = (event) => {
+        const optionFilter = event.target.value;
+
+        if (optionFilter === "gato" || optionFilter === "perro" || optionFilter === "periquito" ||optionFilter === "agaporni" ||optionFilter === "canario") {
+            setFilteredAnimals(allAnimals);
+        } else {
+            const filter = allAnimals.filter((animal) => animal.species === optionFilter);
+            setFilteredAnimals(filter);
+        }
+    }
+
+    const handleClick = (option) => {
+        if (option === 'vacunados') {
+            const vaccinatedAnimals = allAnimals.filter(animal => animal.vaccinated === true);
+            setFilteredAnimals(vaccinatedAnimals);
+        }else if(option === 'esterilizados') {
+            const sterizedAnimals = allAnimals.filter(animal => animal.sterilized === true);
+            setFilteredAnimals(sterizedAnimals);
+        }else if(option === 'envio') {
+            const sendOtherCityAnimals = allAnimals.filter(animal => animal.sendOtherCity === true);
+            setFilteredAnimals(sendOtherCityAnimals);
+        }else{
+            const identifiedAnimals = allAnimals.filter(animal => animal.identified === true);
+            setFilteredAnimals(identifiedAnimals);
+        }
+
+    };
+
+
+    return (
+        <div className="Galeria__container">
+            <header className="header">
+                <div class="inputHeader">
+                    <input class="button" type="text" placeholder={"    Buscar"} onChange={animalInput} />
+                    <img src={buscar} alt="" />
+                </div>
+
+                <div>
+            <input img src={filtros} type="button" onClick={() => setShowOptions(!showOptions)} />
+            {showOptions && (
+                <div>
+                <button onClick={() => handleClick('vacunados')}>Vacunados</button>
+                <button onClick={() => handleClick('esterilizados')}>Esterilizados</button>
+                <button onClick={() => handleClick('envio')}>Envío a otra ciudad</button>
+                <button onClick={() => handleClick('Identificado')}>Identificados</button>
+                </div>
+            )}
+        </div>
+
         
-        // <div>
-        //     <button onClick={handleToggleFilters}>
-        //         <img src={filtros} alt="Buscar" />
-        //     </button>
-        //     {showFilters && (
-        //         <div>
-        //             <select value={filtro} onChange={(e) => handleClick(e.target.value)}>
-        //                 <option value="opcion1">Clase de animal</option>
-        //                 <option value="opcion2">Edad</option>
-        //                 <option value="opcion3">Tamaño</option>
-        //             </select>
-        //             {filtro === 'opcion1' && (
-        //                 <div>
-        //                     {animalTypes.map((type) => (
-        //                         <button key={type} onClick={() => handleSpeciesFilter(type)}>
-        //                             {type}
-        //                         </button>
-        //                     ))}
-        //                 </div>
-        //             )}
-        //             <input
-        //                 type="text"
-        //                 value={birthDateFilter}
-        //                 onChange={handleBirthDateFilter}
-        //                 placeholder="Filtrar por fecha de nacimiento"
-        //             />
-        //             <input
-        //                 type="text"
-        //                 value={sizeFilter}
-        //                 onChange={handleSizeFilter}
-        //                 placeholder="Filtrar por tamaño"
-        //             />
-        //         </div>
-        //     )}
-        //     <div>
-        //         {filteredAnimals.map((animal) => (
-        //             <div key={animal.id}>
-        //                 <img src={animal.image} alt="" width="150px" />
-        //                 <p>{animal.name}</p>
-        //                 <p>{animal.birthdate}</p>
-        //                 <p>{animal.personality}</p>
-        //                 <p>{animal.history}</p>
-        //             </div>
-        //         ))}
-        //     </div>
-        // </div>
+
+            </header>
+
+            <body className="body">
+                <div>
+                    {filteredAnimals.map((animal) => {
+                        return <div className="animalBody">
+                            <img src={animal.image} alt="" width="150px" />
+                            <div className="infoanimal">
+                                <p className="nombreanimal">{animal.name}</p>
+                                <p className="persolalidadanimal">{animal.personality}</p>
+                                <p className="historianimal">{animal.history}</p>
+                            </div>
+                        </div>
+                    })}
+                </div>
+
+            </body>
+            <Navbar />
+        </div>
     );
 };
 

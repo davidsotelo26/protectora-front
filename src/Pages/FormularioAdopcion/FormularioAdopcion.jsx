@@ -1,10 +1,20 @@
-import './FormularioAdopcion.scss';
+import "./FormularioAdopcion.scss";
 import React, { useState } from "react";
 import ProgressBar from "../../Components/ProgressBar/ProgressBar";
+import BotonRetroceso from "../../assets/dentro/retroceso.png";
+
+// ESTADOS QUE SE USARAN EN EL FORMULARIO
 
 const FormularioAdopcion = () => {
   const [step, setStep] = useState(1);
   const [tieneMascotas, setTieneMascotas] = useState(null);
+  const [viveDeAlquiler, setViveDeAlquiler] = useState(null);
+  const [caseroPermite, setCaseroPermite] = useState(null);
+  const [mudartePronto, setMudartePronto] = useState(null);
+  const [tieneJardin, setTieneJardin] = useState(null);
+  const [otrasPersonas, setOtrasPersonas] = useState(null);
+  const [acuerdoAdopcion, setAcuerdoAdopcion] = useState(null);
+  const [visitemosCasa, setVisitemosCasa] = useState(null);
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -13,6 +23,9 @@ const FormularioAdopcion = () => {
   const [codigoPostal, setCodigoPostal] = useState("");
   const [aceptoTerminos, setAceptoTerminos] = useState(false);
 
+
+  // FUNCIONES PARA EL FORMULARIO
+
   const handleContinue = () => {
     if (!isFormValid()) {
       return;
@@ -20,6 +33,12 @@ const FormularioAdopcion = () => {
 
     if (step < 3) {
       setStep(step + 1);
+    }
+  };
+
+  const handleBack = () => {
+    if (step > 1) {
+      setStep(step - 1);
     }
   };
 
@@ -58,65 +77,110 @@ const FormularioAdopcion = () => {
   };
 
   return (
-    <div>
-       {step === 1 && (
+    <div className="divFormularioAdopcion">
+
+      {/* PUNTO 1 */}
+
+      {step === 1 && (
         <div>
-    
-          <h3>Formulario de adopción</h3>
+          <h3 className="h3Formulario">
+            {(step === 2 || step === 3) && (
+              <img
+                className="button-retroceder"
+                src={BotonRetroceso}
+                alt="Retroceder"
+                onClick={handleBack}
+              />
+            )}
+            Formulario de adopción
+          </h3>
+
+          {/* IMPORTADO COMPONENTE  */}
           <ProgressBar pasoActual={step} />
-          <h2>Tus datos</h2>
+
+          <h2 className="h2Formulario">Tus datos</h2>
           <input
+            className="inputFormulario"
             type="text"
             placeholder="Nombre y apellidos"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
           <input
+            className="inputFormulario"
             type="text"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
+            className="inputFormulario"
             type="phone"
             placeholder="Teléfono"
             value={telefono}
             onChange={(e) => setTelefono(e.target.value)}
           />
           <input
+            className="inputFormulario"
             type="text"
             placeholder="DNI"
             value={dni}
             onChange={(e) => setDni(e.target.value)}
           />
-          <h2>Dirección</h2>
-          <input type="text" placeholder="Calle, número, piso" />
+          <h2 className="h2Formulario">Dirección</h2>
           <input
+            className="inputFormulario"
+            type="text"
+            placeholder="Calle, número, piso"
+          />
+          <input
+            className="inputFormulario"
             type="text"
             placeholder="Código postal"
             value={codigoPostal}
             onChangeCapture={(e) => setCodigoPostal(e.target.value)}
           />
-          <input type="text" placeholder="Ciudad" />
-          
-          <div className='terminos-group'>
-          <input className='checkbox'
-            type="checkbox"
-            required
-            onChange={(e) => setAceptoTerminos(e.target.checked)} 
-          />
-          <p>Acepto los términos y condiciones de adopción</p>
+          <input className="inputFormulario" type="text" placeholder="Ciudad" />
+
+          <div className="terminos-group">
+            <input
+              className="checkbox"
+              type="checkbox"
+              required
+              onChange={(e) => setAceptoTerminos(e.target.checked)}
+            />
+            <p className="pFormulario">
+              Acepto los términos y condiciones de adopción
+            </p>
           </div>
 
-          <button onClick={handleContinue}>Continuar</button>
+          <button button className="buttonFormulario" onClick={handleContinue}>
+            Continuar
+          </button>
         </div>
       )}
+
+      {/* PUNTO 2*/}
+
       {step === 2 && (
         <div>
-          <h3>Formulario de adopción</h3>
+          <h3 className="h3Formulario">
+            {(step === 2 || step === 3) && (
+              <img
+                className="button-retroceder"
+                src={BotonRetroceso}
+                alt="Retroceder"
+                onClick={handleBack}
+              />
+            )}
+            Formulario de adopción
+          </h3>
+
+          {/* IMPORTADO COMPONENTE  */}
           <ProgressBar pasoActual={step} />
-          <h2>Sobre las mascotas</h2>
-          <h4>¿Tienes otros animales?</h4>
+
+          <h2 className="h2Formulario">Sobre las mascotas</h2>
+          <h4 className="h4Formulario">¿Tienes otros animales?</h4>
           <label>
             <input
               type="radio"
@@ -139,191 +203,246 @@ const FormularioAdopcion = () => {
           </label>
           {tieneMascotas && (
             <div>
-              <input type="text" placeholder="Nombre de la mascota" required />
-              <input type="text" placeholder="Tipo de mascota" required />
+              <input
+                className="inputFormulario"
+                type="text"
+                placeholder="Nombre de la mascota"
+                required
+              />
+              <input
+                className="inputFormulario"
+                type="text"
+                placeholder="Tipo de mascota"
+                required
+              />
             </div>
           )}
 
-          <button onClick={handleContinue}>Continuar</button>
+          <button className="buttonFormulario" onClick={handleContinue}>
+            Continuar
+          </button>
         </div>
       )}
+
+      {/* PUNTO 3 Y FINAL */}
+
       {step === 3 && (
         <div>
-          <h3>Formulario de adopción</h3>
+          <h3 className="h3Formulario-two">
+            {(step === 2 || step === 3) && (
+              <img
+                className="button-retroceder"
+                src={BotonRetroceso}
+                alt="Retroceder"
+                onClick={handleBack}
+              />
+            )}
+            Formulario de adopción
+          </h3>
+
+          {/* IMPORTADO COMPONENTE  */}
           <ProgressBar pasoActual={step} />
-          <h2>Familia y hogar</h2>
-          <h4>¿Dónde vives?</h4>
-          <input type="text" placeholder="Piso, casa, chalet..." required />
+
+          <h2 className="h2Formulario">Familia y hogar</h2>
+          <h4 className="h4Formulario">¿Dónde vives?</h4>
+          <input
+            className="inputFormulario"
+            type="text"
+            placeholder="Piso, casa, chalet..."
+            required
+          />
 
           <div className="radio-container">
-            <h4>¿Vives de alquiler?</h4>
+            <h4 className="h4Formulario">¿Vives de alquiler?</h4>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="alquiler"
                 value="si"
                 required
-                onChange={() => setTieneMascotas(true)}
+                checked={viveDeAlquiler === "si"}
+                onChange={(e) => setViveDeAlquiler(e.target.value)}
               />
               Sí
             </label>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="alquiler"
                 value="no"
                 required
-                onChange={() => setTieneMascotas(false)}
+                checked={viveDeAlquiler === "no"}
+                onChange={(e) => setViveDeAlquiler(e.target.value)}
               />
               No
             </label>
           </div>
 
           <div className="radio-container">
-            <h4>¿Tu casero permite animales?</h4>
+            <h4 className="h4Formulario">¿Tu casero permite animales?</h4>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="casero"
                 value="si"
                 required
-                onChange={() => setTieneMascotas(true)}
+                checked={caseroPermite === "si"}
+                onChange={(e) => setCaseroPermite(e.target.value)}
               />
               Sí
             </label>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="casero"
                 value="no"
                 required
-                onChange={() => setTieneMascotas(false)}
+                checked={caseroPermite === "no"}
+                onChange={(e) => setCaseroPermite(e.target.value)}
               />
               No
             </label>
           </div>
 
           <div className="radio-container">
-            <h4>¿Crees que podrías mudarte pronto?</h4>
+            <h4 className="h4Formulario">¿Crees que podrías mudarte pronto?</h4>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="mudar"
                 value="si"
                 required
-                onChange={() => setTieneMascotas(true)}
+                checked={mudartePronto === "si"}
+                onChange={(e) => setMudartePronto(e.target.value)}
               />
               Sí
             </label>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="mudar"
                 value="no"
                 required
-                onChange={() => setTieneMascotas(false)}
+                checked={mudartePronto === "no"}
+                onChange={(e) => setMudartePronto(e.target.value)}
               />
               No
             </label>
           </div>
 
           <div className="radio-container">
-            <h4>¿Tiene jardín?</h4>
+            <h4 className="h4Formulario">¿Tiene jardín?</h4>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="jardin"
                 value="si"
                 required
-                onChange={() => setTieneMascotas(true)}
+                checked={tieneJardin === "si"}
+                onChange={(e) => setTieneJardin(e.target.value)}
               />
               Sí
             </label>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="jardin"
                 value="no"
                 required
-                onChange={() => setTieneMascotas(false)}
+                checked={tieneJardin === "no"}
+                onChange={(e) => setTieneJardin(e.target.value)}
               />
               No
             </label>
           </div>
 
           <div className="radio-container">
-            <h4>¿Vives con otras personas?</h4>
+            <h4 className="h4Formulario">¿Vives con otras personas?</h4>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="otraspersonas"
                 value="si"
                 required
-                onChange={() => setTieneMascotas(true)}
+                checked={otrasPersonas === "si"}
+                onChange={(e) => setOtrasPersonas(e.target.value)}
               />
               Sí
             </label>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="otraspersonas"
                 value="no"
                 required
-                onChange={() => setTieneMascotas(false)}
+                checked={otrasPersonas === "no"}
+                onChange={(e) => setOtrasPersonas(e.target.value)}
               />
               No
             </label>
           </div>
 
           <div className="radio-container">
-            <h4>¿Están todos de acuerdo con la adopción?</h4>
+            <h4 className="h4Formulario">
+              ¿Están todos de acuerdo con la adopción?
+            </h4>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="acuerdoadopcion"
                 value="si"
                 required
-                onChange={() => setTieneMascotas(true)}
+                checked={acuerdoAdopcion === "si"}
+                onChange={(e) => setAcuerdoAdopcion(e.target.value)}
               />
               Sí
             </label>
             <label>
               <input
                 type="radio"
-                name="mascotas"
+                name="acuerdoadopcion"
                 value="no"
                 required
-                onChange={() => setTieneMascotas(false)}
+                checked={acuerdoAdopcion === "no"}
+                onChange={(e) => setAcuerdoAdopcion(e.target.value)}
               />
               No
             </label>
           </div>
 
           <div className="radio-container">
-            <h4>¿Estás de acuerdo con que visitemos tu casa?</h4>
+            <h4 className="h4Formulario">
+              ¿Estás de acuerdo con que visitemos tu casa?
+            </h4>
             <label>
               <input
+                className="inputFormulario"
                 type="radio"
-                name="mascotas"
+                name="visitemoscasa"
                 value="si"
                 required
-                onChange={() => setTieneMascotas(true)}
+                checked={visitemosCasa === "si"}
+                onChange={(e) => setVisitemosCasa(e.target.value)}
               />
               Sí
             </label>
             <label>
               <input
+                className="pruebaprueba"
                 type="radio"
-                name="mascotas"
+                name="visitemoscasa"
                 value="no"
                 required
-                onChange={() => setTieneMascotas(false)}
+                checked={visitemosCasa === "no"}
+                onChange={(e) => setVisitemosCasa(e.target.value)}
               />
               No
             </label>
           </div>
 
-          <button onClick={handleContinue}>Enviar</button>
+          <button button className="buttonFormulario" onClick={handleContinue}>
+            Enviar
+          </button>
         </div>
       )}
     </div>

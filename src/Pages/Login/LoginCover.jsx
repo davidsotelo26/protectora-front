@@ -19,7 +19,7 @@ const LoginCover = () => {
           </button>
         </div>
       </Link>
-      <Link to="/home">
+      <Link to="/home" className="loginCoverSkip">
         <p>Registrarse en otro momento</p>
       </Link>
     </div>

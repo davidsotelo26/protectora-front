@@ -79,8 +79,11 @@ function PetProfile() {
       {selectedTab === "adopcion" && <AnimalDetailAdoption />}
 
       <div className="animal_detail_buttons">
-        <button>Apadrinar</button>
-        <button onClick={togglePopup}>Adoptar</button>
+
+        
+        <button className="buttonLinks"><Link to="/animalgallery">Apadrinar </Link></button>
+       
+        <button className="buttonLinks" onClick={togglePopup}>Adoptar</button>
       </div>
 
       {popupVisible && (

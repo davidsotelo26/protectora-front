@@ -21,7 +21,9 @@ import Galeria from "./Pages/galeria/galeria";
 import AnimalGallery from "./Pages/animalGallery/animalGallery";
 import PopupFormulario from "./Pages/Popup/PopupFormulario";
 import PopupEstadoAdopcion from "./Pages/Popup/PopupAdopcion";
+import FiltrosBusqueda from "./Pages/filtrosBusqueda/Filtros";
 import UserProfilePage from "./Pages/userProfilePage/userProfilePage";
+
 
 function App() {
   return (
@@ -47,14 +49,12 @@ function App() {
           <Route path="/adoptionstatuscita" element={<EstadoAdopcionCita />} />
           <Route path="/formulario" element={<FormularioAdopcion />} />
           <Route path="/galeria" element={<Galeria />} />
-
           <Route path="/form" element={<FormularioAdopcion />} />
           <Route path="/animals/:id" element={<PetProfile />} />
           <Route path="/formsubmitted" element={<PopupFormulario />} />
           <Route path="/requestadoption" element={<PopupEstadoAdopcion />} />
+          <Route path="/busqueda" element={<FiltrosBusqueda />} />
           <Route path="/userprofilepage" element={<UserProfilePage />} />
-
-
         </Routes>
       </Router>
     </div>

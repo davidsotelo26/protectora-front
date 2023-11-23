@@ -6,14 +6,14 @@
 
 .AnimalFilterContainer {
     width: 100vw;
-    height: 100%;
-
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     header {
+        height: 30vh;
 
         .inputHeader{
             width: 100%;
@@ -29,7 +29,7 @@
                 height: 2vh;
                 border-radius: 10px;
                 border: 1px solid #01748E;
-            
+
                 ::placeholder {
                     padding-right: 10px;
                 }
@@ -74,8 +74,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
- 
-    
+
+
 
     .botones{
         width: 80vw;
@@ -96,13 +96,11 @@
         }
     }
 
-    body{
-        margin-bottom: 5rem;
-
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    .bodyAnimalGallery{
+        max-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 
         select {
@@ -139,8 +137,8 @@ justify-content: center;
                 flex-direction: row;
                 justify-content:space-between;
                 align-items: center;
-                
-            
+
+
             .nombreanimal {
                 font-size: 1.5rem;
                 font-weight: bold;

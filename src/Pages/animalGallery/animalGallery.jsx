@@ -7,7 +7,8 @@ import ovalC from "../../../src/assets/ovalCopy.png";
 import oval from "../../../src/assets/oval.png";
 import { useEffect, useState } from "react";
 import { getAnimals } from "../../Services/Animals";
-import Navbar from "../../Components/navbar/navbar"
+import Navbar from "../../Components/navbar/navbar";
+import { Link } from "react-router-dom";
 
 const AnimalGallery = () => {
 
@@ -25,7 +26,7 @@ const AnimalGallery = () => {
 
   const handleSelect = (e) => {
     const optionFilter = e.target.value;
- 
+
     if (optionFilter === "all") {
         setFilteredAnimals(allAnimals);
         return;
@@ -74,22 +75,20 @@ const AnimalGallery = () => {
         </div>
 
         <div className="puntosHeader">
-        
+
         <img className="pto" src={ovalC} alt="" />
         <img className="pto" src={oval} alt="" />
         <img className="pto" src={ovalC} alt="" />
-      
+
         </div>
 
       </div>
 
-      
+
 </header>
 
-<body className="body">      
+<main className="bodyAnimalGallery">      
 
-    
-      
       <select name="city" id="city" onChange={handleSelect}>
           <option value="all">All</option>
           <option value="Madrid">Madrid</option>
@@ -97,26 +96,27 @@ const AnimalGallery = () => {
           <option value="Aranjuez">Aranjuez</option>
           <option value="Oviedo">Oviedo</option>
       </select>
-    
-    <div>
-      
+
+
       {filteredAnimals.map((animal) =>{
-        return  <div  className="animalBody">
-                  <img src={animal.image} alt=""  width="150px"/>
-                  <div className="infoanimal">
-                  <p className="nombreanimal">{animal.name}</p>
-                  <p className="ciudadanimal">{animal.city}</p>
+        return  <Link to={`/animals/${animal._id}`}>
+                  <div  className="animalBody">
+                    <img src={animal.image} alt=""  width="150px"/>
+                    <div className="infoanimal">
+                    <p className="nombreanimal">{animal.name}</p>
+                    <p className="historianimal">{animal.city}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
         } )
             }
-    </div>
+   
 
-</body>
+</main>
 
 <Navbar/>
     </div>
-    
+
   );
 }
 

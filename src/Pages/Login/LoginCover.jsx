@@ -5,14 +5,14 @@ const LoginCover = () => {
   return (
     <div className="loginCoverContainer">
       <p className="loginCoverQuestion">¿Cómo quieres entrar?</p>
-      <Link to="/loginregister">
+      <Link to="/login">
         <div className="loginCoverButtonContainer">
           <button type="button" className="loginCoverButton">
             Usuario
           </button>
         </div>
       </Link>
-      <Link>
+      <Link to="/login">
         <div className="loginCoverButtonContainer">
           <button type="button" className="loginCoverButton">
             Asociación protectora

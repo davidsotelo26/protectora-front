@@ -7,7 +7,6 @@ const iconos = require.context("../../assets", true);
 function FiltrosBusqueda() {
     const [searchTerm, setSearchTerm] = useState({ city: "", especies: "", edad: "", genre: "", size: "" });
     const [characters, setCharacters] = useState([]);
-    const [filteredCharacters, setFilteredCharacters] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -23,12 +22,24 @@ function FiltrosBusqueda() {
         fetchCharacter();
     }, []);
 
-    const handleButtonSize = (value) => {
+    const handleButtonSize = (event) => {
+        const value = event.target.innerText;
         setSearchTerm({ ...searchTerm, size: value })
+        if (event.target.id === "f-btn__especie") {
+            event.target.id = "f-btn__especie--selected"
+        } else {
+            event.target.id = "f-btn__especie"
+        }
     };
 
-    const handleButtonGenre = (value) => {
+    const handleButtonGenre = (event) => {
+        const value = event.target.innerText;
         setSearchTerm({ ...searchTerm, genre: value })
+        if (event.target.id === "f-btn__especie") {
+            event.target.id = "f-btn__especie--selected"
+        } else {
+            event.target.id = "f-btn__especie"
+        }
     };
 
     const handleButtonSpecie = (event) => {
@@ -65,7 +76,16 @@ function FiltrosBusqueda() {
                     type="text"
                     name="city"
                     onChange={handleSearch}>
-
+                        <option value="Madrid">Madrid</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Zaragoza">Zaragoza</option>
+                        <option value="Aranjuez">Aranjuez</option>
+                        <option value="Sevilla">Sevilla</option>
+                        <option value="Ciudad Real">Ciudad Real</option>
+                        <option value="Gerona">Gerona</option>
+                        <option value="Vitoria-Gasteiz">Vitoria-Gasteiz</option>
+                        <option value="Oviedo">Oviedo</option>
+                        <option value="Castellón">Oviedo</option>
                 </select>
 
                 <p className="f-para">Especie</p>
@@ -126,26 +146,26 @@ function FiltrosBusqueda() {
                 </select>
                 <p className="f-para">Sexo</p>
                 <div className="f-b-filters">
-                    <button id="f-btn__genre" onClick={() => handleButtonGenre("Female")}>
+                    <button id="f-btn__genre" onClick={handleButtonGenre}>
                         <img className="f-img" src={iconos("./Primarios/female.png")} alt="female" />
                         Hembra
                     </button>
-                    <button id="f-btn__genre" onClick={() => handleButtonGenre("Male")}>
+                    <button id="f-btn__genre" onClick={handleButtonGenre}>
                         <img className="f-img" src={iconos("./Primarios/male.png")} alt="male" />
                         Macho
                     </button>
                 </div>
                 <p className="f-para">Tamaño</p>
                 <div className="f-b-filters">
-                    <button id="f-btn__size" onClick={() => handleButtonSize("S")}>
+                    <button id="f-btn__size" onClick={handleButtonSize}>
                         <img className="f-img" src={iconos("./Primarios/group.png")} alt="small" />
                         Pequeño
                     </button>
-                    <button id="f-btn__size" onClick={() => handleButtonSize("M")}>
+                    <button id="f-btn__size" onClick={handleButtonSize}>
                         <img className="f-img" src={iconos("./Primarios/groupCopy.png")} alt="middle" />
                         Mediano
                     </button>
-                    <button id="f-btn__size" onClick={() => handleButtonSize("L")}>
+                    <button id="f-btn__size" onClick={handleButtonSize}>
                         <img className="f-img" src={iconos("./Primarios/groupCopy2.png")} alt="large" />
                         Grande
                     </button>

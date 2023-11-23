@@ -4,148 +4,64 @@
     text-decoration:none;
 }
 
-.AnimalFilterContainer {
+.Galeria__container {
     width: 100vw;
-    height: 100%;
-
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
+
 
     header {
-
-        .inputHeader{
+        width: 100%;
+        
+        .inputHeader {
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 2vh;
-            margin-bottom: 2vh;
-
-
-            input {
-                width: 80vw;
-                height: 2vh;
-                border-radius: 10px;
-                border: 1px solid #01748E;
-
-                ::placeholder {
-                    padding-right: 10px;
-                }
-
-                img {
-                    width: 8px;
-                    object-fit: contain;
-                }
-            }
-        }
-
-        .textoHeader {
-        display: flex;
-        flex-direction: column;
-
-            .textoHeader1{
-
-                display: flex;
-                flex-direction: row;
-            h2 {
-                color: #01748E;
-                font-size: 1.5rem;
-            }
-
-            img {
-                margin-left: 0.5rem;
-            }
-        }
-
-        .textoHeader2{
-            margin-bottom: 1rem;
-            p {
-                font-size: 12px;
-            }
-        }
-        }
-
-.botonesHeader {
-
-    height: 15vh;
+            height: 5vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-
-
-
-    .botones{
-        width: 80vw;
-        height: 5vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;  
-    }
-
-    .botonHeader {
-        width: 20vw;
-        height: 8vh;
-        border-radius: 10px;
-        border: 1px solid #01748E;
-        background-color: #BDD2D6;
-        color: #01748E;
+            input {
+                width: 60%;
+                height: 3vh;
+                border: 1px solid #000;
+                border-radius: 4px;
             }
         }
     }
 
-    .bodyAnimalGallery{
-        height: 0vh;
-        margin-bottom: 5rem;
+    .animalBody { 
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+    .animal{
+       display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:2vh;
+        width: 100%;
+        height: 30vh;
+        border: 1px solid #01748E;
+        border-radius: 5px;
 
+        .fotoanimal{
+            padding-bottom: 1vh;
+            border-bottom: 1px solid #01748E;
+            border-radius: 5px;
+img{
+            width: 250px;
+            height: 150px;
+            object-fit:fill}
+        }
 
-        select {
-            width: 60vw;
-            background-color: white;
-            border: 1px solid #01748E;
+        .infoanimal {
+            margin-top: 1vh;
             color: #01748E;
             font-weight: bold;
-
-            margin-bottom: 1rem;
         }
-
-
-        .animalBody {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            margin-bottom: 1rem;
-
-            border: 1px solid #01748E;
-            color: #01748E;
-            width: 90vw;
-            border-radius: 10px;
-
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
-
-            .infoanimal{
-                width: 90%;
-                display: flex;
-                flex-direction: row;
-                justify-content:space-between;
-                align-items: center;
-
-
-            .nombreanimal {
-                font-size: 1.5rem;
-                font-weight: bold;
-            }
-            }
-        }
-
     }
-}        
+    }
+}

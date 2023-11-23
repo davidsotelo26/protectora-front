@@ -1,12 +1,12 @@
 .HomeContainer {
   width: 93vw;
-  height: 100vh;
+  height: 140vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  padding-top: 80px;
-  overflow: visible;
-  margin-left: 5px;
+    flex-direction: column;
+    padding-top: 80px;
+    overflow: visible;
+    margin-left: 5px;
 
   h3 {
     font-size: 25px;
@@ -116,9 +116,6 @@
         background-color: rgb(200, 220, 224);
       }
 
-      .Apadrina-img {
-        // margin-right: -14.5px;
-      }
     }
   }
 
@@ -188,10 +185,4 @@
     justify-content: center;
     align-items: center;
   }
-}
-
-.fixed-navbar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }

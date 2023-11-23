@@ -6,14 +6,14 @@
 
 .AnimalFilterContainer {
     width: 100vw;
-    height: 100%;
-
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     header {
+        height: 30vh;
 
         .inputHeader{
             width: 100%;
@@ -97,11 +97,10 @@
     }
 
     .bodyAnimalGallery{
-        height: 0vh;
-        margin-bottom: 5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        max-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 
         select {

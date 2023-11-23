@@ -26,14 +26,11 @@ function AnimalDetailHealth() {
 
     return (
         <div className='animal_detail_component_container'>
-            <div className='animal_detail_line'> <h2>Vacunado/a</h2> <p>{animal.vaccinated ? 'Sí' : 'No'}</p> </div>
-            <div className='animal_detail_line'> <h2>Desparasitado/a</h2> <p>{animal.dewormed ? 'Sí' : 'No'}</p> </div>
-            <div className='animal_detail_line'> <h2>Esterilizado/a</h2> <p>{animal.sterilized ? 'Sí' : 'No'}</p> </div>
-            <div className='animal_detail_line'> <h2>Identificado/a</h2> <p>{animal.identified ? 'Sí' : 'No'}</p> </div>
-            <div className='animal_detail_line'> <h2>Microchip</h2> <p>{animal.microchip ? 'Sí' : 'No'}</p> </div>
-            
-            <div> <h2>Personalidad</h2> </div>
-            <div> <p>{animal.personality}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Vacunado/a</h2> <p>{animal.vaccinated ? 'Sí' : 'No'}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Desparasitado/a</h2> <p>{animal.dewormed ? 'Sí' : 'No'}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Esterilizado/a</h2> <p>{animal.sterilized ? 'Sí' : 'No'}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Identificado/a</h2> <p>{animal.identified ? 'Sí' : 'No'}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Microchip</h2> <p>{animal.microchip ? 'Sí' : 'No'}</p> </div>
             
             <div className='epigraph'>
                 <h2 className='epigraph_title'>Tienes que saber que necesito</h2> 

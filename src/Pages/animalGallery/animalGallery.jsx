@@ -7,7 +7,8 @@ import ovalC from "../../../src/assets/ovalCopy.png";
 import oval from "../../../src/assets/oval.png";
 import { useEffect, useState } from "react";
 import { getAnimals } from "../../Services/Animals";
-import Navbar from "../../Components/navbar/navbar"
+import Navbar from "../../Components/navbar/navbar";
+import { Link } from "react-router-dom";
 
 const AnimalGallery = () => {
 
@@ -98,13 +99,15 @@ const AnimalGallery = () => {
 
 
       {filteredAnimals.map((animal) =>{
-        return  <div  className="animalBody">
-                  <img src={animal.image} alt=""  width="150px"/>
-                  <div className="infoanimal">
-                  <p className="nombreanimal">{animal.name}</p>
-                  <p className="historianimal">{animal.city}</p>
+        return  <Link to={`/animals/${animal._id}`}>
+                  <div  className="animalBody">
+                    <img src={animal.image} alt=""  width="150px"/>
+                    <div className="infoanimal">
+                    <p className="nombreanimal">{animal.name}</p>
+                    <p className="historianimal">{animal.city}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
         } )
             }
    

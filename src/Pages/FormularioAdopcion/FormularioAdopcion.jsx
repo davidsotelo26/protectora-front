@@ -81,11 +81,11 @@ const FormularioAdopcion = () => {
   };
 
   return (
-    <div className="divFormularioAdopcion">
+    <div>
       {/* PUNTO 1 */}
 
       {step === 1 && (
-        <div>
+        <div className="divFormularioAdopcion">
           <h3 className="h3Formulario">
             {(step === 2 || step === 3) && (
               <img

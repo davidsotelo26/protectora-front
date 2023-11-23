@@ -26,14 +26,14 @@ function AnimalDetailInfo() {
 
     return (
         <div className='animal_detail_component_container'>
-            <div className='animal_detail_line'> <h2>Especie</h2> <p>{animal.species}</p> </div>
-            <div className='animal_detail_line'> <h2>Fecha de nacimiento</h2> <p>{animal.birthDate}</p> </div>
-            <div className='animal_detail_line'> <h2>Sexo</h2> <p>{animal.genre}</p> </div>
-            <div className='animal_detail_line'> <h2>Tamaño</h2> <p>{animal.size}</p> </div>
-            <div className='animal_detail_line'> <h2>Peso</h2> <p>{animal.weight}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Especie</h2> <p>{animal.species}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Fecha de nacimiento</h2> <p>{animal.birthDate}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Sexo</h2> <p>{animal.genre}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Tamaño</h2> <p>{animal.size}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Peso</h2> <p>{animal.weight}</p> </div>
             
-            <div> <h2 className='epigraph_title'>Personalidad</h2> </div>
-            <div> <p>{animal.personality}</p> </div>
+            <div className='animal_detail_line'> <h2 className='epigraph_title'>Personalidad</h2>
+             <p>{animal.personality}</p> </div>
             
             <div className='epigraph'>
                 <h2 className='epigraph_title'>Historia</h2> 

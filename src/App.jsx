@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Splash from "./Pages/Onboarding/Splash/Splash";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import LoginCover from "./Pages/Login/LoginCover";
-import LoginRegister from "./Pages/Login/LoginRegister";
+import Login from "./Pages/Login/Login";
 import MapPage from "./Pages/Map/MapPage";
 import Home from "./Pages/Home/Home";
 import MasPage from "./Pages/Mas/mas";
@@ -17,10 +17,13 @@ import FormularioAdopcion from "./Pages/FormularioAdopcion/FormularioAdopcion";
 import EstadoAdopcionAdicional from "./Pages/EstadoAdopcionPage/EstadoAdopcionAdicional";
 import EstadoAdopcionCita from "./Pages/EstadoAdopcionPage/EstadoAdopcionCita";
 import Galeria from "./Pages/galeria/galeria";
-import petProfile from "./Pages/PetProfile/petProfile";
 import AnimalGallery from "./Pages/animalGallery/animalGallery";
 import PopupFormulario from "./Pages/Popup/PopupFormulario";
 import PopupEstadoAdopcion from "./Pages/Popup/PopupAdopcion";
+import FiltrosBusqueda from "./Pages/filtrosBusqueda/Filtros";
+import UserProfilePage from "./Pages/userProfilePage/userProfilePage";
+
+
 function App() {
   return (
     <div className="App">
@@ -30,7 +33,7 @@ function App() {
           <Route path="/" element={<Splash />} />
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/logincover" element={<LoginCover />} />
-          <Route path="/loginregister" element={<LoginRegister />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/animalgallery" element={<AnimalGallery />}/>
           <Route path="/map" element={<MapPage />} />
           <Route path="/home" element={<Home />} />
@@ -42,19 +45,14 @@ function App() {
           <Route path="/adoptionstatus" element={<EstadoAdopcionResumen />} />
           <Route path="/adoptionstatusaditional" element={<EstadoAdopcionAdicional />} />
           <Route path="/adoptionstatuscita" element={<EstadoAdopcionCita />} />
-
           <Route path="/formulario" element={<FormularioAdopcion />} />
           <Route path="/galeria" element={<Galeria />} />
-          <Route path="/animals/:id" element={<petProfile />} />
-
-
           <Route path="/form" element={<FormularioAdopcion />} />
-          <Route path="/galery" element={<Galeria />} />
           <Route path="/animals/:id" element={<PetProfile />} />
           <Route path="/formsubmitted" element={<PopupFormulario />} />
           <Route path="/requestadoption" element={<PopupEstadoAdopcion />} />
-
-          
+          <Route path="/busqueda" element={<FiltrosBusqueda />} />
+          <Route path="/userprofilepage" element={<UserProfilePage />} />
         </Routes>
       </Router>
     </div>

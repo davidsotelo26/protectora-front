@@ -57,7 +57,7 @@ const ProfilePage = () => {
 </button>
 </Link>
 
-<Link to="/apadrinar">
+<Link to="/adoptionstatus">
 <button className="botonApadrinar">
     <img src={botonApadrinar} alt="" />
     <p className="pButton">Apadrinar</p>

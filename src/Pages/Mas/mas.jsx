@@ -64,7 +64,7 @@ const MasPage = () => {
 </div>
 <div className="logout">
 
-<Link to="/onboarding">
+<Link to="/">
 <button className="botonAdopciones">
 
     <img src={logout} alt="" />

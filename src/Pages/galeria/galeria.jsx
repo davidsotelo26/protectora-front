@@ -9,8 +9,6 @@ const Galeria = () => {
     const [allAnimals, setAllAnimals] = useState([]);
     const [filteredAnimals, setFilteredAnimals] = useState([]);
     const [showOptions, setShowOptions] = useState(false);
-    
-
 
     useEffect(() => {
         const getAnimalsData = async () => {
@@ -60,36 +58,37 @@ const Galeria = () => {
                 </div>
 
                 <div>
-            <input img src={filtros} type="button" onClick={() => setShowOptions(!showOptions)} />
-            {showOptions && (
+                <input img src={filtros} type="button" onClick={() => setShowOptions(!showOptions)} />
+                {showOptions && (
                 <div>
                 <button onClick={() => handleClick('vacunados')}>Vacunados</button>
                 <button onClick={() => handleClick('esterilizados')}>Esterilizados</button>
                 <button onClick={() => handleClick('envio')}>Envío a otra ciudad</button>
                 <button onClick={() => handleClick('Identificado')}>Identificados</button>
                 </div>
-            )}
-        </div>
-
-        
-
+                )}
+                </div>
             </header>
 
-            <body className="body">
-                <div>
+            <main className="main">
+                <div className="animalBody">
                     {filteredAnimals.map((animal) => {
-                        return <div className="animalBody">
-                            <img src={animal.image} alt="" width="150px" />
+                        return <div className="animal">
+                            <div className="fotoanimal">
+                            <img src={animal.image} alt="" />
+                            </div>
                             <div className="infoanimal">
-                                <p className="nombreanimal">{animal.name}</p>
-                                <p className="persolalidadanimal">{animal.personality}</p>
-                                <p className="historianimal">{animal.history}</p>
+                                <p className="nombreanimal">· Nombre: {animal.name}</p>
+                                <p className="persolalidadanimal">· Personalidad: {animal.personality}</p>
+                                
                             </div>
                         </div>
+                        
+                        
                     })}
+                
                 </div>
-
-            </body>
+                </main>
             <Navbar />
         </div>
     );

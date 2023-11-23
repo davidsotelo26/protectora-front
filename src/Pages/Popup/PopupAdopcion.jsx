@@ -1,6 +1,7 @@
 import "./PopupAdopcion.scss";
 import { useNavigate } from "react-router-dom";
 import ImagenVideoAdopcion from "../../assets/group5.png";
+import { useState } from "react";
 
 const PopupAdopcion = ({ onClose = () => {} }) => {
   const navigate = useNavigate();

@@ -1,4 +1,67 @@
-.container{
+* {
+    margin: 0px;
+    box-sizing: unset;
+    text-decoration:none;
+}
 
-    
+.Galeria__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    header {
+        width: 100%;
+        
+        .inputHeader {
+            width: 100%;
+            height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+            input {
+                width: 60%;
+                height: 3vh;
+                border: 1px solid #000;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .animalBody { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    .animal{
+       display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:2vh;
+        width: 100%;
+        height: 30vh;
+        border: 1px solid #01748E;
+        border-radius: 5px;
+
+        .fotoanimal{
+            padding-bottom: 1vh;
+            border-bottom: 1px solid #01748E;
+            border-radius: 5px;
+img{
+            width: 250px;
+            height: 150px;
+            object-fit:fill}
+        }
+
+        .infoanimal {
+            margin-top: 1vh;
+            color: #01748E;
+            font-weight: bold;
+        }
+    }
+    }
 }

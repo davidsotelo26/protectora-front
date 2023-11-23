@@ -1,0 +1,41 @@
+
+
+.userProfilecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+    .userProfileimg{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .userProfileinfo {
+        text-align: left;
+        margin-bottom: 20px;
+        
+        .userProfileh2{
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 1.3rem;
+            margin-left: 10px;
+        }
+
+        .userProfilep{
+            
+            height: 30px;
+            text-align: left;
+            font-size: 1rem;
+            margin: 0;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        } 
+    }
+}

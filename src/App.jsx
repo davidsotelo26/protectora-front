@@ -17,7 +17,6 @@ import FormularioAdopcion from "./Pages/FormularioAdopcion/FormularioAdopcion";
 import EstadoAdopcionAdicional from "./Pages/EstadoAdopcionPage/EstadoAdopcionAdicional";
 import EstadoAdopcionCita from "./Pages/EstadoAdopcionPage/EstadoAdopcionCita";
 import Galeria from "./Pages/galeria/galeria";
-import petProfile from "./Pages/PetProfile/petProfile";
 import AnimalGallery from "./Pages/animalGallery/animalGallery";
 import PopupFormulario from "./Pages/Popup/PopupFormulario";
 import PopupEstadoAdopcion from "./Pages/Popup/PopupAdopcion";
@@ -45,7 +44,6 @@ function App() {
           <Route path="/adoptionstatuscita" element={<EstadoAdopcionCita />} />
           <Route path="/formulario" element={<FormularioAdopcion />} />
           <Route path="/galeria" element={<Galeria />} />
-          <Route path="/animals/:id" element={<petProfile />} />
           <Route path="/form" element={<FormularioAdopcion />} />
           <Route path="/animals/:id" element={<PetProfile />} />
           <Route path="/formsubmitted" element={<PopupFormulario />} />

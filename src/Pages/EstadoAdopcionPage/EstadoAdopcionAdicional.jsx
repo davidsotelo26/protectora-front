@@ -1,10 +1,32 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import "./EstadoAdopcionAdicional.scss"
 import arrowIcon from "../../../src/assets/menupie/homered.png"
 import Navbar from "../../Components/navbar/navbar"
+import axios from "axios"
+import { useEffect, useState } from "react"
 
 const EstadoAdopcionAdicional = () => {
     
+    function AnimalDetailInfo() {
+        const { id } = useParams();
+        const [animal, setAnimal] = useState(null); 
+    
+        useEffect(() => {
+            const getAnimal = async () => {
+                try {
+                    const animalResponse = await axios.get(`http://localhost:3000/animals/id/${id}`);
+                    setAnimal(animalResponse.data);
+    
+                } catch (error) {
+                    console.error(error);
+                }
+            };
+            getAnimal();
+        }, [id]);
+    
+        if (!animal) {
+            return <div>Cargando...</div>;
+        }}
     
     
     return (

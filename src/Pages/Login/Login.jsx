@@ -2,7 +2,6 @@ import "./Login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 
-import Register from "../Register/Register";
 import axios from "axios";
 
 
@@ -138,8 +137,7 @@ const Login = () => {
 
 
     return (
-      <div className="loginPage">
-        {isRegistering ? <Register/> : (
+      <div className="loginPage"> (
         <>
       <form className="loginForm" action="" onSubmit={handleLoginSubmit}>
         <Link to="/">
@@ -179,7 +177,7 @@ const Login = () => {
           Crear cuenta
         </button>
     </>
-  )}
+  )
     </div>
   );
 }

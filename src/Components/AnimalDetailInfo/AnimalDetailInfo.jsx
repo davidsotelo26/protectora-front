@@ -32,8 +32,8 @@ function AnimalDetailInfo() {
             <div className='animal_detail_line'> <h2>Tamaño</h2> <p>{animal.size}</p> </div>
             <div className='animal_detail_line'> <h2>Peso</h2> <p>{animal.weight}</p> </div>
             
-            <div> <h2 className='epigraph_title'>Personalidad</h2> </div>
-            <div> <p>{animal.personality}</p> </div>
+            <div className='animal_detail_line'> <h2>Personalidad</h2>
+             <p>{animal.personality}</p> </div>
             
             <div className='epigraph'>
                 <h2 className='epigraph_title'>Historia</h2> 

@@ -32,9 +32,6 @@ function AnimalDetailHealth() {
             <div className='animal_detail_line'> <h2>Identificado/a</h2> <p>{animal.identified ? 'Sí' : 'No'}</p> </div>
             <div className='animal_detail_line'> <h2>Microchip</h2> <p>{animal.microchip ? 'Sí' : 'No'}</p> </div>
             
-            <div> <h2>Personalidad</h2> </div>
-            <div> <p>{animal.personality}</p> </div>
-            
             <div className='epigraph'>
                 <h2 className='epigraph_title'>Tienes que saber que necesito</h2> 
                 <p className='epigraph_text'>{animal.adoptionRequirements}</p>

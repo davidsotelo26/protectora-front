@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Splash from "./Pages/Onboarding/Splash/Splash";
 import Onboarding from "./Pages/Onboarding/Onboarding";
 import LoginCover from "./Pages/Login/LoginCover";
-import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
 import MapPage from "./Pages/Map/MapPage";
 import Home from "./Pages/Home/Home";
@@ -35,7 +34,6 @@ function App() {
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/logincover" element={<LoginCover />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/animalgallery" element={<AnimalGallery />}/>
           <Route path="/map" element={<MapPage />} />
           <Route path="/home" element={<Home />} />

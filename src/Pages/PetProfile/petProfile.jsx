@@ -58,10 +58,14 @@ function PetProfile() {
       </div>
 
       <div className="animal_detail_head">
+        <div>
         <h1>{animal.name}</h1>
-        <h2>{animal.city}</h2>
+        <h4>{animal.city}</h4>
+        </div>
+        <div>
         <img src={FavIcon} alt="añadir a favoritos" />
         <img src={ShareIcon} alt="compartir" />
+        </div>
       </div>
 
       <div className="animal_detail_tabs">

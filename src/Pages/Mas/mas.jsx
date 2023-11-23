@@ -37,7 +37,7 @@ const MasPage = () => {
 </button>
 </Link>
 
-<Link to="/favoritos">
+<Link to="/animalgallery">
 <button className="botonFavoritos">
     <img src={botonBlog} alt="" />
     <p className="pButton">Curiosidades</p>
@@ -53,7 +53,7 @@ const MasPage = () => {
 </button>
 </Link>
 
-<Link to="/config">
+<Link to="/mas">
 <button className="botonConfig">
     <img src={botonConfig} alt="" />
     <p className="pButton">Configuracion</p>
